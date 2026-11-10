@@ -1,0 +1,1086 @@
+<!doctype html>
+<html lang="zh-CN" class="no-js">
+<head>
+<meta charset="utf-8">
+<script>document.documentElement.className = document.documentElement.className.replace('no-js', 'js');</script>
+<title>Something Ventured</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Something Ventured 是一个会员制线下俱乐部，属于 AI、VC 与机器人行业的新一代。首家店铺 3F Library 将于 12.15 在杭州开业。仅限推荐。">
+<meta name="theme-color" content="#140E0D">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Something Ventured">
+<meta property="og:title" content="Something Ventured">
+<meta property="og:description" content="Nothing ventured, nothing gained. 一个属于 AI、VC 与机器人行业新一代的会员制线下俱乐部。首家店铺 3F Library · 杭州 · 12.15 开业。">
+<meta property="og:image" content="assets/img/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/jost-latin-var.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/sound.js" defer></script>
+<script src="assets/js/main.js" defer></script>
+</head>
+<body>
+
+<!-- ============ icon sprite ============ -->
+<svg class="sprite" width="0" height="0" aria-hidden="true" focusable="false">
+  <symbol id="iBell" viewBox="0 0 24 24"><circle cx="12" cy="4.6" r="1.7" fill="currentColor"/><path d="M11.1 5.8h1.8v2.1h-1.8zM3.6 17.2a8.4 8.4 0 0 1 16.8 0z" fill="currentColor"/><rect x="2" y="17.9" width="20" height="2.3" rx="1.1" fill="currentColor"/></symbol>
+  <symbol id="iKey" viewBox="0 0 40 96">
+    <circle cx="20" cy="8" r="5.5" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <path d="M20 13.5V21" stroke="currentColor" stroke-width="2"/>
+    <circle cx="20" cy="31" r="11" style="fill:var(--key,#D9B060)"/>
+    <circle cx="20" cy="31" r="4.4" style="fill:var(--hole,#3A1422)"/>
+    <rect x="17.4" y="40.5" width="5.2" height="40" rx="1.6" style="fill:var(--key,#D9B060)"/>
+    <path d="M22.6 66h7v4.4h-3.6v4.2h4.6v5.6h-8z" style="fill:var(--key,#D9B060)"/>
+    <path d="M12 39l-5 33M12 39l-1.6 35M12 39l2.2 34" style="stroke:var(--tassel,#9B2D4A)" stroke-width="2.2" stroke-linecap="round" fill="none"/>
+    <circle cx="12" cy="39" r="2.6" style="fill:var(--tassel,#9B2D4A)"/>
+  </symbol>
+  <symbol id="iCities" viewBox="0 0 32 32"><path d="M16 16L16 5M16 16L27 16M16 16L16 27M16 16L5 16" stroke="currentColor" stroke-width="1.4"/><circle cx="16" cy="16" r="3.6" fill="currentColor"/><circle cx="16" cy="4.5" r="2.6" fill="currentColor"/><circle cx="27.5" cy="16" r="2.6" fill="currentColor"/><circle cx="16" cy="27.5" r="2.6" fill="currentColor"/><circle cx="4.5" cy="16" r="2.6" fill="currentColor"/></symbol>
+  <symbol id="iClock" viewBox="0 0 32 32"><circle cx="16" cy="16" r="12" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 8.5V16l5 3" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M16 4v2M16 26v2M4 16h2M26 16h2" stroke="currentColor" stroke-width="1.6"/></symbol>
+  <symbol id="iChairs" viewBox="0 0 32 32"><path d="M2.5 9h3.4v12.5H2.5zM2.5 17h9.5v4H2.5zM2.5 14.8h8v2.2h-8zM3.4 21.5l-.6 4.5M10.8 21.5l.6 4.5M26.1 9h3.4v12.5h-3.4zM20 17h9.5v4H20zM21.5 14.8h8v2.2h-8zM28.6 21.5l.6 4.5M21.2 21.5l-.6 4.5" fill="currentColor" stroke="currentColor" stroke-width=".8"/><circle cx="16" cy="12" r="1.6" fill="currentColor"/></symbol>
+</svg>
+
+<!-- ============ opening titles (once per session) ============ -->
+<div class="intro" data-intro aria-hidden="true">
+  <div class="intro__curtain intro__curtain--l"></div>
+  <div class="intro__curtain intro__curtain--r"></div>
+  <div class="intro__title">
+    <p class="intro__k">A Something Ventured Picture</p>
+    <p class="intro__t">Something Ventured</p>
+    <p class="intro__s">Hangzhou · MMXXVI</p>
+  </div>
+  <div class="intro__leader">
+    <div class="leader">
+      <svg viewBox="0 0 200 200" class="leader__svg" data-leader-svg>
+        <circle class="leader__sweep" cx="100" cy="100" r="50" pathLength="1"/>
+        <circle class="leader__ring" cx="100" cy="100" r="88"/>
+        <circle class="leader__ring leader__ring--thin" cx="100" cy="100" r="72"/>
+        <path class="leader__cross" d="M100 0V200M0 100H200"/>
+      </svg>
+      <span class="leader__num" data-leader-num>3</span>
+    </div>
+    <p class="leader__cap">Something Ventured · Reel One</p>
+  </div>
+  <button class="intro__skip" type="button" data-intro-skip tabindex="-1">Skip ›</button>
+</div>
+
+<!-- ============ navigation ============ -->
+<header class="nav" data-nav>
+  <div class="nav__in">
+    <a class="nav__brand" href="#top" data-cursor="TOP">
+      <svg class="crest" viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="18.6" fill="none" stroke="currentColor" stroke-width="1.4"/><circle cx="20" cy="20" r="14.6" fill="none" stroke="currentColor" stroke-width=".8"/><text x="20" y="24.4" text-anchor="middle">SV</text></svg>
+      <span class="nav__word">Something Ventured</span>
+    </a>
+    <div class="nav__act">
+      <button class="nav__btn" type="button" data-concierge-open data-cursor="CONCIERGE" aria-label="礼宾台（快捷键 ⌘K）">
+        <svg class="nav__ico" aria-hidden="true"><use href="#iBell"/></svg><span class="nav__lbl">Concierge</span><kbd class="nav__kbd">⌘K</kbd>
+      </button>
+      <button class="nav__btn snd" type="button" data-sound aria-pressed="false" data-cursor="SOUND" aria-label="背景音乐">
+        <span class="snd__bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span><span class="nav__lbl">Sound</span>
+      </button>
+      <a class="btn btn--nav" href="#apply" data-magnetic data-cursor="APPLY">Apply<span class="nav__zh">申请</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HUD: chapter + timecode ============ -->
+<div class="hud" aria-hidden="true">
+  <span class="hud__pill"><i class="hud__rec"></i><span data-hud-chap>Opening · 开场</span></span>
+  <span class="hud__pill hud__pill--tc">TC <span data-hud-tc>00:00:00:00</span></span>
+</div>
+
+<div class="cursor" aria-hidden="true"><div class="cursor__ring"><div class="cursor__shape"><span class="cursor__label" data-cursor-label></span></div></div><div class="cursor__dot"></div></div>
+
+<main>
+<!-- ============ OPENING: the facade ============ -->
+<section class="hero" id="top" data-chapter="Opening · 开场">
+  <div class="hero__pin">
+    <div class="hero__bar hero__bar--top">
+      <p class="hero__cities">Hangzhou · Shanghai · Shenzhen · Beijing</p>
+    </div>
+
+    <div class="hero__scene" data-hero-scene>
+      <div class="hero__cam" data-hero-cam>
+        <svg class="hero__svg" viewBox="0 0 1600 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true" focusable="false">
+          <defs>
+            <linearGradient id="hSky" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0" stop-color="#9DBFD4"/><stop offset=".62" stop-color="#D5E3E5"/><stop offset="1" stop-color="#F3D6CC"/>
+            </linearGradient>
+            <radialGradient id="hSun"><stop offset="0" stop-color="#FFF4DC" stop-opacity=".95"/><stop offset="1" stop-color="#FFF4DC" stop-opacity="0"/></radialGradient>
+            <radialGradient id="hGlow"><stop offset="0" stop-color="#FFE2A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFE2A0" stop-opacity="0"/></radialGradient>
+            <pattern id="hAwning" width="40" height="10" patternUnits="userSpaceOnUse"><rect width="20" height="10" fill="#F7EBDD"/><rect x="20" width="20" height="10" fill="#9B2D4A"/></pattern>
+            <pattern id="hBlinds" width="10" height="7" patternUnits="userSpaceOnUse"><rect width="10" height="3.6" fill="#EDE3F3"/></pattern>
+            <pattern id="hBal" width="12" height="22" patternUnits="userSpaceOnUse"><rect x="5" width="2.4" height="22" fill="#F4E6D4"/></pattern>
+            <g id="hCloud"><ellipse cx="0" cy="0" rx="78" ry="22"/><circle cx="-34" cy="-12" r="26"/><circle cx="6" cy="-24" r="34"/><circle cx="42" cy="-8" r="22"/></g>
+            <g id="hCity">
+              <rect x="-60" y="600" width="140" height="268" fill="#D7CBDB"/>
+              <rect x="-64" y="592" width="148" height="10" fill="#F4E6D4"/><rect x="-64" y="588" width="148" height="5" rx="2" fill="#FFFBF4"/>
+              <g fill="#F6EADB"><rect x="-40" y="628" width="26" height="34"/><rect x="24" y="628" width="26" height="34"/><rect x="-40" y="690" width="26" height="34"/><rect x="24" y="690" width="26" height="34" fill="#F8DFA0"/><rect x="-40" y="752" width="26" height="34"/><rect x="24" y="752" width="26" height="34"/></g>
+              <rect x="80" y="540" width="160" height="328" fill="#E9D6B2"/>
+              <path d="M74 540L94 488H226L246 540Z" fill="#8E9CB0"/>
+              <rect x="92" y="483" width="136" height="7" rx="3" fill="#FFFBF4"/>
+              <g fill="#F6EADB"><rect x="118" y="502" width="22" height="26"/><rect x="180" y="502" width="22" height="26"/></g>
+              <g fill="#F6EADB"><rect x="100" y="568" width="26" height="40"/><rect x="147" y="568" width="26" height="40" fill="#F8DFA0"/><rect x="194" y="568" width="26" height="40"/><rect x="100" y="638" width="26" height="40"/><rect x="147" y="638" width="26" height="40"/><rect x="194" y="638" width="26" height="40" fill="#F8DFA0"/><rect x="100" y="708" width="26" height="40"/><rect x="147" y="708" width="26" height="40"/><rect x="194" y="708" width="26" height="40"/></g>
+              <rect x="145" y="800" width="30" height="68" fill="#9B2D4A"/>
+              <rect x="240" y="620" width="150" height="248" fill="#C3D5C2"/>
+              <rect x="234" y="610" width="162" height="12" fill="#F4E6D4"/><rect x="234" y="606" width="162" height="5" rx="2" fill="#FFFBF4"/>
+              <g fill="#F6EADB"><rect x="258" y="650" width="26" height="36"/><rect x="302" y="650" width="26" height="36" fill="#F8DFA0"/><rect x="346" y="650" width="26" height="36"/><rect x="258" y="716" width="26" height="36"/><rect x="302" y="716" width="26" height="36"/><rect x="346" y="716" width="26" height="36"/></g>
+              <rect x="300" y="800" width="30" height="68" fill="#E0A93B"/>
+              <path d="M390 868V580H410V560H430V540H490V560H510V580H530V868Z" fill="#E8C6C0"/>
+              <g fill="#FFFBF4"><rect x="408" y="557" width="24" height="5" rx="2"/><rect x="428" y="537" width="64" height="5" rx="2"/><rect x="488" y="557" width="24" height="5" rx="2"/></g>
+              <circle cx="460" cy="560" r="10" fill="#F6EADB"/>
+              <g fill="#F6EADB"><rect x="412" y="604" width="36" height="44"/><rect x="474" y="604" width="36" height="44"/><rect x="412" y="676" width="36" height="44" fill="#F8DFA0"/><rect x="474" y="676" width="36" height="44"/><rect x="412" y="748" width="36" height="44"/><rect x="474" y="748" width="36" height="44"/></g>
+            </g>
+            <g id="hLamp">
+              <circle cx="0" cy="682" r="54" fill="url(#hGlow)" class="hero__lampglow"/>
+              <rect x="-4" y="700" width="8" height="168" fill="#3E4A44"/>
+              <rect x="-12" y="856" width="24" height="12" fill="#3E4A44"/>
+              <path d="M-14 702L-10 668H10L14 702Z" fill="#FFE7A6" stroke="#3E4A44" stroke-width="3"/>
+              <path d="M-18 668H18L0 654Z" fill="#3E4A44"/>
+            </g>
+            <g id="hTree">
+              <rect x="-4" y="770" width="8" height="90" fill="#8A5A44"/>
+              <circle cx="0" cy="748" r="46" fill="#76B094"/>
+              <circle cx="-14" cy="734" r="18" fill="#8CC2A8" opacity=".7"/>
+              <path d="M-40 726Q0 692 40 726Q20 716 0 719Q-20 716-40 726Z" fill="#FFFBF4"/>
+              <rect x="-20" y="846" width="40" height="22" fill="#9B2D4A"/>
+              <rect x="-23" y="842" width="46" height="6" fill="#7B1E3A"/>
+            </g>
+          </defs>
+
+          <rect width="1600" height="900" fill="url(#hSky)"/>
+          <circle cx="800" cy="350" r="320" fill="url(#hSun)"/>
+          <circle cx="800" cy="350" r="132" fill="#FBEAD0" opacity=".75"/>
+
+          <g class="hl" data-depth=".14">
+            <g class="hero__clouds" fill="#FBF4EA">
+              <use href="#hCloud" x="250" y="230"/>
+              <use href="#hCloud" x="470" y="150"/>
+              <use href="#hCloud" x="1130" y="160"/>
+              <use href="#hCloud" x="1350" y="240"/>
+            </g>
+          </g>
+
+          <g class="hl" data-depth=".3">
+            <use href="#hCity"/>
+            <use href="#hCity" transform="matrix(-1 0 0 1 1600 0)"/>
+          </g>
+
+          <g class="hl" data-depth=".52">
+            <rect x="0" y="868" width="1600" height="32" fill="#E4D2BF"/>
+            <rect x="0" y="865" width="1600" height="5" fill="#FFFBF4"/>
+
+            <!-- flags -->
+            <g class="flag flag--l"><rect x="554" y="296" width="4" height="100" fill="#7B1E3A"/><path class="flag__cloth" d="M555 300H505L515 313L505 326H555Z" fill="#9B2D4A"/></g>
+            <g class="flag flag--r"><rect x="1042" y="296" width="4" height="100" fill="#7B1E3A"/><path class="flag__cloth" d="M1045 300H1095L1085 313L1095 326H1045Z" fill="#9B2D4A"/></g>
+
+            <!-- roof sign -->
+            <rect x="650" y="372" width="6" height="24" fill="#7B1E3A"/><rect x="944" y="372" width="6" height="24" fill="#7B1E3A"/>
+            <rect x="600" y="316" width="400" height="56" fill="#9B2D4A"/>
+            <rect x="607" y="323" width="386" height="42" fill="none" stroke="#E0A93B" stroke-width="2"/>
+            <text class="hero__signtext" x="800" y="352" text-anchor="middle">SOMETHING VENTURED</text>
+            <g class="bulbs" data-bulbs="600,316,400,56,16"></g>
+
+            <!-- parapet -->
+            <rect x="548" y="389" width="504" height="8" rx="3" fill="#FFFBF4"/>
+            <rect x="548" y="395" width="504" height="8" fill="#F4E6D4"/>
+            <rect x="556" y="403" width="488" height="27" fill="#EFC3C1"/>
+            <g fill="#E3A3A5"><rect x="562" y="423" width="8" height="7"/><rect x="594" y="423" width="8" height="7"/><rect x="626" y="423" width="8" height="7"/><rect x="658" y="423" width="8" height="7"/><rect x="690" y="423" width="8" height="7"/><rect x="722" y="423" width="8" height="7"/><rect x="754" y="423" width="8" height="7"/><rect x="786" y="423" width="8" height="7"/><rect x="818" y="423" width="8" height="7"/><rect x="850" y="423" width="8" height="7"/><rect x="882" y="423" width="8" height="7"/><rect x="914" y="423" width="8" height="7"/><rect x="946" y="423" width="8" height="7"/><rect x="978" y="423" width="8" height="7"/><rect x="1010" y="423" width="8" height="7"/></g>
+
+            <!-- pilasters -->
+            <rect x="548" y="430" width="24" height="438" fill="#F4E6D4"/>
+            <rect x="1028" y="430" width="24" height="438" fill="#F4E6D4"/>
+
+            <!-- 3F: Library -->
+            <rect x="572" y="430" width="456" height="148" fill="#A9D3BE"/>
+            <rect x="694" y="437" width="212" height="22" fill="#F4E6D4" stroke="#9B2D4A" stroke-width="1.5"/>
+            <text class="hero__floortext" x="800" y="453" text-anchor="middle">LIBRARY</text>
+            <g>
+              <path d="M630 572V506A38 38 0 0 1 706 506V572Z" fill="#F4E6D4"/>
+              <path d="M637 572V506A31 31 0 0 1 699 506V572Z" fill="#FBE3A6"/>
+              <path d="M762 572V506A38 38 0 0 1 838 506V572Z" fill="#F4E6D4"/>
+              <path d="M769 572V506A31 31 0 0 1 831 506V572Z" fill="#FBE3A6"/>
+              <path d="M894 572V506A38 38 0 0 1 970 506V572Z" fill="#F4E6D4"/>
+              <path d="M901 572V506A31 31 0 0 1 963 506V572Z" fill="#FBE3A6"/>
+              <g fill="#C98F55"><rect x="637" y="522" width="62" height="2.6"/><rect x="637" y="546" width="62" height="2.6"/><rect x="769" y="522" width="62" height="2.6"/><rect x="769" y="546" width="62" height="2.6"/><rect x="901" y="522" width="62" height="2.6"/><rect x="901" y="546" width="62" height="2.6"/></g>
+              <g data-books="638,522,698;638,546,698;638,570,698;770,522,830;770,546,830;770,570,830;902,522,962;902,546,962;902,570,962" data-scale=".75"></g>
+              <g fill="#F4E6D4"><rect x="666.5" y="475" width="3" height="97"/><rect x="798.5" y="475" width="3" height="97"/><rect x="930.5" y="475" width="3" height="97"/></g>
+              <g fill="#F4E6D4"><rect x="624" y="571" width="88" height="6"/><rect x="756" y="571" width="88" height="6"/><rect x="888" y="571" width="88" height="6"/></g>
+              <g fill="#FFFBF4"><rect x="624" y="568" width="88" height="4" rx="2"/><rect x="756" y="568" width="88" height="4" rx="2"/><rect x="888" y="568" width="88" height="4" rx="2"/></g>
+            </g>
+
+            <rect x="560" y="578" width="480" height="10" fill="#F4E6D4"/>
+            <rect x="560" y="575" width="480" height="4" rx="2" fill="#FFFBF4"/>
+
+            <!-- 2F: Night -->
+            <rect x="572" y="588" width="456" height="130" fill="#C9B6DA"/>
+            <rect x="750" y="595" width="100" height="22" rx="3" fill="#3B2350"/>
+            <text class="hero__neon" x="800" y="611" text-anchor="middle">NIGHT</text>
+            <g fill="#F4E6D4"><rect x="638" y="622" width="84" height="82"/><rect x="758" y="622" width="84" height="82"/><rect x="878" y="622" width="84" height="82"/></g>
+            <g fill="#5B4570"><rect x="644" y="628" width="72" height="70"/><rect x="764" y="628" width="72" height="70"/><rect x="884" y="628" width="72" height="70"/></g>
+            <g fill="url(#hBlinds)"><rect x="644" y="630" width="72" height="66"/><rect x="764" y="630" width="72" height="66"/><rect x="884" y="630" width="72" height="66"/></g>
+            <rect x="596" y="690" width="408" height="22" fill="url(#hBal)"/>
+            <rect x="592" y="687" width="416" height="5" fill="#F4E6D4"/><rect x="592" y="710" width="416" height="4" fill="#F4E6D4"/>
+
+            <rect x="560" y="718" width="480" height="10" fill="#F4E6D4"/>
+            <rect x="560" y="715" width="480" height="4" rx="2" fill="#FFFBF4"/>
+
+            <!-- 1F: Dining & Bar -->
+            <rect x="572" y="728" width="456" height="140" fill="#A9C8DA"/>
+            <rect x="566" y="728" width="468" height="26" fill="url(#hAwning)"/>
+            <g data-scallops="576,754,10,23"></g>
+            <rect x="762" y="776" width="76" height="92" fill="#F4E6D4"/>
+            <rect class="hero__doorlight" x="770" y="784" width="60" height="84" fill="#FFE6A8"/>
+            <g class="hero__door" data-hero-door>
+              <rect x="770" y="784" width="60" height="84" fill="#E0A93B"/>
+              <circle cx="800" cy="806" r="12" fill="#FBE3A6" stroke="#C48A1E" stroke-width="3"/>
+              <rect x="778" y="826" width="44" height="34" fill="none" stroke="#C48A1E" stroke-width="2"/>
+              <circle cx="820" cy="840" r="3.5" fill="#7A4A1E"/>
+            </g>
+            <rect x="752" y="862" width="96" height="6" fill="#D8C4AE"/>
+            <g fill="#F4E6D4"><rect x="598" y="772" width="144" height="80"/><rect x="858" y="772" width="144" height="80"/></g>
+            <g fill="#3E5A73"><rect x="606" y="780" width="128" height="64"/><rect x="866" y="780" width="128" height="64"/></g>
+            <text class="hero__glass" x="670" y="820" text-anchor="middle">DINING</text>
+            <text class="hero__glass" x="930" y="820" text-anchor="middle">BAR</text>
+            <g fill="#F4E6D4"><rect x="592" y="850" width="156" height="6"/><rect x="852" y="850" width="156" height="6"/></g>
+            <g>
+              <rect x="738" y="848" width="16" height="20" fill="#9B2D4A"/><circle cx="746" cy="836" r="13" fill="#76B094"/><path d="M735 830Q746 816 757 830Q746 826 735 830Z" fill="#FFFBF4"/>
+              <rect x="846" y="848" width="16" height="20" fill="#9B2D4A"/><circle cx="854" cy="836" r="13" fill="#76B094"/><path d="M843 830Q854 816 865 830Q854 826 843 830Z" fill="#FFFBF4"/>
+            </g>
+          </g>
+
+          <g class="hl" data-depth=".85">
+            <use href="#hTree" x="330"/>
+            <use href="#hTree" x="1270"/>
+            <use href="#hLamp" x="470"/>
+            <use href="#hLamp" x="1130"/>
+          </g>
+        </svg>
+        <canvas class="hero__snow" data-snow></canvas>
+      </div>
+      <div class="hero__vignette" aria-hidden="true"></div>
+    </div>
+
+    <div class="hero__bar hero__bar--bottom" data-hero-bottom>
+      <div class="hero__subs">
+        <h1 class="sr">Something Ventured · 会员制线下俱乐部</h1>
+        <p class="sub sub--en">Nothing ventured, nothing gained.</p>
+        <p class="sub sub--zh">一个会员制线下俱乐部，属于在 AI、VC 与机器人浪潮里亲手下注的新一代。</p>
+      </div>
+      <div class="hero__count">
+        <p class="hero__countk">3F Library · Hangzhou <span>距开业</span></p>
+        <div class="count" data-countdown role="timer" aria-label="距 2026 年 12 月 15 日杭州 Library 开业">
+          <span class="count__g"><span class="flaps" data-cd="d"></span><em>Days 天</em></span>
+          <span class="count__g"><span class="flaps" data-cd="h"></span><em>Hrs 时</em></span>
+          <span class="count__g"><span class="flaps" data-cd="m"></span><em>Min 分</em></span>
+          <span class="count__g"><span class="flaps" data-cd="s"></span><em>Sec 秒</em></span>
+        </div>
+        <p class="count__open">Now open · 现已开业</p>
+        <p class="count__plain">Opens 12.15.2026 · 12 月 15 日开业</p>
+      </div>
+      <div class="hero__cta">
+        <a class="btn btn--rasp" href="#apply" data-magnetic data-cursor="APPLY">Request an introduction<span>申请推荐入会</span></a>
+        <a class="playlink" href="#trailer" data-cursor="PLAY"><span class="playlink__i" aria-hidden="true"></span>Play the trailer<span>观看预告</span></a>
+      </div>
+    </div>
+
+    <div class="hero__fade" data-hero-fade aria-hidden="true"></div>
+  </div>
+</section>
+
+<!-- ============ TRAILER ============ -->
+<section class="trailer" id="trailer" data-chapter="Trailer · 预告片">
+  <div class="trailer__track" data-scene="trailer">
+    <div class="trailer__stage">
+      <article class="tcard tcard--mint">
+        <div class="tcard__frame">
+          <p class="tc-k" style="--n:0">The following picture has been approved for</p>
+          <p class="tc-big" style="--n:1">Those who venture</p>
+          <p class="tc-zh" style="--n:2">以下内容，仅献给敢于下注的人</p>
+          <p class="tc-sm" style="--n:3">Something Ventured · A members’ club · By referral only</p>
+        </div>
+      </article>
+      <article class="tcard tcard--pink">
+        <div class="tcard__frame">
+          <p class="tc-k" style="--n:0">In a world where</p>
+          <p class="tc-big" style="--n:1">Everything<br>can be generated</p>
+          <p class="tc-zh" style="--n:2">当一切都能被生成</p>
+        </div>
+      </article>
+      <article class="tcard tcard--powder">
+        <div class="tcard__frame">
+          <p class="tc-k" style="--n:0">Today’s agenda · 今日待办</p>
+          <ul class="tc-list" style="--n:1">
+            <li data-tick><span class="tc-box" aria-hidden="true"></span>Write the code<em>写代码</em></li>
+            <li data-tick><span class="tc-box" aria-hidden="true"></span>Run the diligence<em>做尽调</em></li>
+            <li data-tick><span class="tc-box" aria-hidden="true"></span>Answer the email<em>回邮件</em></li>
+            <li data-tick><span class="tc-box" aria-hidden="true"></span>Clear the calendar<em>排日程</em></li>
+          </ul>
+          <p class="tc-stamp" style="--n:2">Done by AI · 已由 AI 完成</p>
+          <p class="tc-zh" style="--n:3">效率，已经不再稀缺。</p>
+        </div>
+      </article>
+      <article class="tcard tcard--mustard">
+        <div class="tcard__frame">
+          <p class="tc-k" style="--n:0">Except for one thing</p>
+          <p class="tc-big" style="--n:1">Being there.</p>
+          <p class="tc-zh" style="--n:2">亲自到场，成了最稀缺的东西。</p>
+          <p class="tc-body" style="--n:3">一个值得你合上电脑、亲自走进去的地方，和一群不需要解释，就知道你在做什么的人。</p>
+        </div>
+      </article>
+      <article class="tcard tcard--cream">
+        <div class="tcard__frame">
+          <p class="tc-k" style="--n:0">Something Ventured presents</p>
+          <ol class="tc-tri" style="--n:1">
+            <li><b>Real</b><span>真实</span><p>真实的藏书，不插电的现场音乐，真实的人。</p></li>
+            <li><b>In person</b><span>在场</span><p>不是屏幕上的又一个窗口。你在，这一刻才成立。</p></li>
+            <li><b>Irreplaceable</b><span>不可替代</span><p>模型可以模拟很多东西，除了坐在你对面的那个人。</p></li>
+          </ol>
+          <p class="tc-coming" style="--n:2">Coming this winter</p>
+          <p class="tc-date" style="--n:3">3F Library · Hangzhou · <b>12.15.2026</b> · 今冬开业</p>
+        </div>
+      </article>
+      <a class="trailer__skip" href="#name" data-cursor="SKIP">Skip intro<span>跳过</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER ONE: THE NAME ============ -->
+<section class="ch ch--name" id="name" data-chapter="Ch. 1 · The Name · 名字">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--pink">
+        <p class="chap__no">Chapter One</p>
+        <h2 class="chap__title">The Name</h2>
+        <p class="chap__zh">第一章 · 关于名字</p>
+        <p class="chap__sub"><i>In which the name is explained, and a proverb is corrected.</i><span>其中，名字得到解释，一句谚语被改写。</span></p>
+      </div>
+    </header>
+
+    <p class="edit" data-reveal>
+      <span class="edit__w"><del>Nothing</del><ins>Something</ins></span> ventured,<br>
+      <span class="edit__w edit__w--2"><del>nothing</del><ins>something</ins></span> gained.
+    </p>
+
+    <div class="prose">
+      <p data-reveal>名字来自 2011 年的纪录片<cite>《Something Ventured》</cite>，由 Dan Geller 与 Dayna Goldfine 执导。影片讲述了硅谷风险投资行业的诞生：1950 年代末起，Arthur Rock、Don Valentine、Tom Perkins 等早期投资人与创业者并肩，成就了 Intel、Apple、Genentech、Cisco、Atari。</p>
+      <blockquote class="quote" data-reveal><p>If you know, you know.</p><footer>懂的都懂</footer></blockquote>
+      <p data-reveal>对 VC、AI、机器人行业的人来说，这个名字是一句暗号：识别同类，也带来熟悉感与共鸣。它连接俱乐部与会员，也连接会员彼此。而这句短语本身，也是这一代人的路径：承担风险，做出牺牲，才能在大时代与新产业里，赢得成功与认可。</p>
+    </div>
+
+    <figure class="board" data-board>
+      <div class="board__frame">
+        <header class="board__head">
+          <span class="board__title">Departures</span>
+          <span class="board__zh">出发</span>
+          <span class="board__clock"><span data-clock>--:--</span> Hangzhou</span>
+        </header>
+        <div class="board__cols" aria-hidden="true"><span class="board__cy">Year</span><span class="board__cd">Destination</span><span class="board__cr">Remarks</span></div>
+        <ol class="board__rows">
+          <li class="board__row" data-row="1950s|VENTURE CAPITAL|DEPARTED"><span class="board__plain">1950s · Venture capital · Departed</span></li>
+          <li class="board__row" data-row="1968|INTEL|DEPARTED"><span class="board__plain">1968 · Intel · Departed</span></li>
+          <li class="board__row" data-row="1972|ATARI|DEPARTED"><span class="board__plain">1972 · Atari · Departed</span></li>
+          <li class="board__row" data-row="1976|APPLE|DEPARTED"><span class="board__plain">1976 · Apple · Departed</span></li>
+          <li class="board__row" data-row="1976|GENENTECH|DEPARTED"><span class="board__plain">1976 · Genentech · Departed</span></li>
+          <li class="board__row" data-row="1984|CISCO|DEPARTED"><span class="board__plain">1984 · Cisco · Departed</span></li>
+          <li class="board__row" data-row="2011|SOMETHING VENTURED|ON SCREEN"><span class="board__plain">2011 · Something Ventured（纪录片）· On screen</span></li>
+          <li class="board__row is-now" data-row="2026|HANGZHOU LIBRARY|NOW BOARDING"><span class="board__plain">2026 · Hangzhou Library · Now boarding</span></li>
+        </ol>
+      </div>
+      <figcaption>1950 年代末起，风险投资与第一代创业者并肩出发。下一站：杭州。</figcaption>
+    </figure>
+  </div>
+</section>
+
+<!-- ============ CHAPTER TWO: THE CLUB ============ -->
+<section class="ch ch--club" id="club" data-chapter="Ch. 2 · The Club · 俱乐部">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--mint">
+        <p class="chap__no">Chapter Two</p>
+        <h2 class="chap__title">The Club</h2>
+        <p class="chap__zh">第二章 · 俱乐部</p>
+        <p class="chap__sub"><i>In which one key opens more than one door.</i><span>其中，一把钥匙，打开不止一扇门。</span></p>
+      </div>
+    </header>
+
+    <h3 class="hl" data-reveal>One key.<br>Every door.</h3>
+    <p class="hl-zh" data-reveal>一个身份，而不是一张消费卡。</p>
+    <p class="lede" data-reveal>Something Ventured 是独立运行的会员组织，围绕会员身份运行。俱乐部本身不直接承载消费场景，内容与体验由旗下不同业态的店铺承载。店铺对公众开放；会员在每一家店铺，都享有相应的权益。</p>
+
+    <div class="keys" data-keys data-mode="guest">
+      <div class="keys__toggle" role="group" aria-label="比较顾客与会员">
+        <button type="button" data-keys-mode="guest" aria-pressed="true" data-cursor="GUEST">Guest<span>顾客</span></button>
+        <button type="button" data-keys-mode="member" aria-pressed="false" data-cursor="MEMBER">Member<span>会员</span></button>
+      </div>
+      <div class="keys__cab">
+        <p class="keys__plate">Something Ventured · Key Cabinet</p>
+        <ul class="keys__grid">
+          <li class="cubby" data-guest style="--i:0"><span class="cubby__no">HZ · 301</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Library</span><span class="cubby__st">Opens 12.15</span></li>
+          <li class="cubby" style="--i:1"><span class="cubby__no">HZ · 201</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Nightclub</span><span class="cubby__st">Planned</span></li>
+          <li class="cubby" style="--i:2"><span class="cubby__no">HZ · 101</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Dining &amp; Bar</span><span class="cubby__st">Planned</span></li>
+          <li class="cubby cubby--tba" style="--i:3"><span class="cubby__no">SH</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Shanghai</span><span class="cubby__st">Coming</span></li>
+          <li class="cubby cubby--tba" style="--i:4"><span class="cubby__no">SZ</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Shenzhen</span><span class="cubby__st">Coming</span></li>
+          <li class="cubby cubby--tba" style="--i:5"><span class="cubby__no">BJ</span><svg class="cubby__key" aria-hidden="true"><use href="#iKey"/></svg><span class="cubby__name">Beijing</span><span class="cubby__st">Coming</span></li>
+        </ul>
+      </div>
+      <p class="keys__cap" aria-live="polite"><span data-show="guest">顾客：只与一家店发生关系。</span><span data-show="member">会员：与整个网络发生关系。同一身份，在杭州、上海、深圳、北京的旗下店铺通用。</span></p>
+    </div>
+
+    <ul class="perks">
+      <li data-reveal><span class="perks__ico"><svg aria-hidden="true"><use href="#iCities"/></svg></span><h4>One identity, four cities</h4><p class="perks__zh">一个身份 · 四座城市</p><p>同一会员身份，跨城市通用（陆续开放）。</p></li>
+      <li data-reveal style="--d:1"><span class="perks__ico"><svg aria-hidden="true"><use href="#iClock"/></svg></span><h4>Members’ hours</h4><p class="perks__zh">会员时段</p><p>部分空间与时段只为会员保留，比如 Library 的白天。</p></li>
+      <li data-reveal style="--d:2"><span class="perks__ico"><svg aria-hidden="true"><use href="#iChairs"/></svg></span><h4>Your people</h4><p class="perks__zh">同类</p><p>有熟悉感与共鸣的社群。俱乐部组织会员之间的社交，也让彼此认出同类。</p></li>
+      <li data-reveal style="--d:3"><span class="perks__ico"><svg aria-hidden="true"><use href="#iBell"/></svg></span><h4>A dedicated host</h4><p class="perks__zh">专属服务</p><p>每位会员，都有专门的服务人员。</p></li>
+    </ul>
+  </div>
+</section>
+
+<!-- ============ CHAPTER THREE: HANGZHOU ============ -->
+<section class="ch ch--hz" id="hangzhou" data-chapter="Ch. 3 · Hangzhou · 杭州">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--powder">
+        <p class="chap__no">Chapter Three</p>
+        <h2 class="chap__title">A Street, Folded</h2>
+        <p class="chap__zh">第三章 · 折叠空间</p>
+        <p class="chap__sub"><i>In which a street is folded into a building.</i><span>其中，一条街被折叠进一栋楼。</span></p>
+      </div>
+    </header>
+    <p class="lede" data-reveal>杭州的整栋楼，是一个「折叠空间」：三个楼层的店铺，在名字与概念设定上，就像一个街区里的各色店铺与内容，被压缩、折叠进一栋立体的小楼。这是 Something Ventured 的第一个「会员小综合体」，每个小综合体都集合多种不同业态的店铺。</p>
+  </div>
+
+  <div class="fold" data-scene="fold">
+    <div class="fold__sticky">
+      <ol class="fold__caps" aria-hidden="true">
+        <li><b>I. A street.</b><span>一条街区：各色店铺，各自营业。</span></li>
+        <li><b>II. Folded.</b><span>把它们压缩、折叠……</span></li>
+        <li><b>III. Into one building.</b><span>……折进一栋三层小楼。</span></li>
+        <li class="is-on"><b>IV. Open house.</b><span>推开每一层：一个身份，三层通行。</span></li>
+      </ol>
+
+      <svg class="fold__svg" viewBox="0 0 1000 720" role="img" aria-labelledby="foldTitle">
+        <title id="foldTitle">杭州小综合体剖面：3F Library，12 月 15 日开业；2F 夜店，规划中；1F 餐饮与酒吧，规划中。</title>
+        <defs>
+          <clipPath id="fClip"><rect width="300" height="150"/></clipPath>
+          <pattern id="fAwn" width="30" height="10" patternUnits="userSpaceOnUse"><rect width="15" height="10" fill="#F7EBDD"/><rect x="15" width="15" height="10" fill="#9B2D4A"/></pattern>
+          <pattern id="fChk" width="20" height="12" patternUnits="userSpaceOnUse"><rect width="20" height="12" fill="#F2E3CF"/><rect width="10" height="6" fill="#C9A98A"/><rect x="10" y="6" width="10" height="6" fill="#C9A98A"/></pattern>
+          <pattern id="fBlinds" width="10" height="7" patternUnits="userSpaceOnUse"><rect width="10" height="3.6" fill="#EDE3F3"/></pattern>
+          <pattern id="fBal" width="12" height="20" patternUnits="userSpaceOnUse"><rect x="5" width="2.2" height="20" fill="#F4E6D4"/></pattern>
+          <radialGradient id="fGlow"><stop offset="0" stop-color="#FFE2A0" stop-opacity=".9"/><stop offset="1" stop-color="#FFE2A0" stop-opacity="0"/></radialGradient>
+        </defs>
+
+        <rect x="0" y="640" width="1000" height="80" fill="#EADCCB"/>
+        <path d="M0 640H1000" stroke="#33211E" stroke-width="2"/>
+        <text class="f-gl f-gl--street" x="500" y="684" text-anchor="middle" opacity="0">A STREET · 一条街</text>
+        <text class="f-gl f-gl--bldg" x="500" y="684" text-anchor="middle">HANGZHOU · 一栋楼</text>
+
+        <!-- roof -->
+        <g class="f-roof" data-froof>
+          <g class="flag flag--l"><rect x="338" y="92" width="3.5" height="70" fill="#7B1E3A"/><path class="flag__cloth" d="M339 96H301L309 106L301 116H339Z" fill="#9B2D4A"/></g>
+          <g class="flag flag--r"><rect x="658.5" y="92" width="3.5" height="70" fill="#7B1E3A"/><path class="flag__cloth" d="M661 96H699L691 106L699 116H661Z" fill="#9B2D4A"/></g>
+          <rect x="420" y="150" width="4" height="12" fill="#7B1E3A"/><rect x="576" y="150" width="4" height="12" fill="#7B1E3A"/>
+          <rect x="370" y="110" width="260" height="40" fill="#9B2D4A"/>
+          <rect x="375" y="115" width="250" height="30" fill="none" stroke="#E0A93B" stroke-width="1.5"/>
+          <text class="f-roofsign" x="500" y="135.5" text-anchor="middle">SOMETHING VENTURED</text>
+          <g class="bulbs" data-bulbs="370,110,260,40,13"></g>
+          <rect x="338" y="158" width="324" height="7" fill="#F4E6D4"/>
+          <rect x="342" y="165" width="316" height="25" fill="#EFC3C1"/>
+        </g>
+
+        <!-- 1F: Dining & Bar -->
+        <g class="fu" data-fu="1" transform="translate(350 490)">
+          <g clip-path="url(#fClip)">
+            <g class="fu__in">
+              <rect width="300" height="150" fill="#7FA8C2"/>
+              <rect x="50" y="20" width="200" height="60" fill="#6B93AE"/>
+              <rect x="50" y="48" width="200" height="3" fill="#C9A15A"/>
+              <rect x="50" y="77" width="200" height="3" fill="#C9A15A"/>
+              <g data-bottles="56,48,244;56,77,244"></g>
+              <g>
+                <path d="M80 0V14M150 0V14M220 0V14" stroke="#33211E" stroke-width="1.5"/>
+                <circle class="f-glow" cx="80" cy="26" r="20" fill="url(#fGlow)"/><circle class="f-glow" cx="150" cy="26" r="20" fill="url(#fGlow)"/><circle class="f-glow" cx="220" cy="26" r="20" fill="url(#fGlow)"/>
+                <path d="M71 22L75 14H85L89 22ZM141 22L145 14H155L159 22ZM211 22L215 14H225L229 22Z" fill="#E0A93B"/>
+              </g>
+              <rect x="24" y="96" width="252" height="6" fill="#C9A15A"/>
+              <rect x="28" y="102" width="244" height="36" fill="#9B2D4A"/>
+              <path d="M70 106V134M110 106V134M150 106V134M190 106V134M230 106V134" stroke="#7B1E3A" stroke-width="2"/>
+              <rect x="28" y="130" width="244" height="3" fill="#C9A15A"/>
+              <g fill="#E0A93B"><rect x="53" y="108" width="18" height="5" rx="2"/><rect x="103" y="108" width="18" height="5" rx="2"/><rect x="179" y="108" width="18" height="5" rx="2"/><rect x="229" y="108" width="18" height="5" rx="2"/></g>
+              <path d="M56 113L54 138M68 113L70 138M106 113L104 138M118 113L120 138M182 113L180 138M194 113L196 138M232 113L230 138M244 113L246 138" stroke="#33211E" stroke-width="2"/>
+              <rect y="138" width="300" height="12" fill="url(#fChk)"/>
+            </g>
+            <g class="fu__face" transform="translate(0 -152)">
+              <rect width="300" height="150" fill="#A9C8DA"/>
+              <rect width="300" height="24" fill="url(#fAwn)"/>
+              <g data-scallops="7.5,24,7.5,20"></g>
+              <rect x="124" y="58" width="52" height="92" fill="#F4E6D4"/>
+              <rect x="130" y="64" width="40" height="86" fill="#E0A93B"/>
+              <circle cx="150" cy="84" r="9" fill="#FBE3A6" stroke="#C48A1E" stroke-width="2.5"/>
+              <circle cx="163" cy="114" r="2.5" fill="#7A4A1E"/>
+              <rect x="18" y="52" width="94" height="66" fill="#F4E6D4"/><rect x="24" y="58" width="82" height="54" fill="#3E5A73"/>
+              <rect x="188" y="52" width="94" height="66" fill="#F4E6D4"/><rect x="194" y="58" width="82" height="54" fill="#3E5A73"/>
+              <text class="f-glass" x="65" y="90" text-anchor="middle">DINING</text>
+              <text class="f-glass" x="235" y="90" text-anchor="middle">BAR</text>
+              <rect x="14" y="118" width="102" height="5" fill="#F4E6D4"/><rect x="184" y="118" width="102" height="5" fill="#F4E6D4"/>
+            </g>
+          </g>
+          <rect width="300" height="150" fill="none" stroke="#33211E" stroke-width="2"/>
+        </g>
+
+        <!-- 2F: Nightclub -->
+        <g class="fu" data-fu="2" transform="translate(350 340)">
+          <g clip-path="url(#fClip)">
+            <g class="fu__in">
+              <rect width="300" height="150" fill="#3B2350"/>
+              <g class="f-beams">
+                <path d="M150 24L62 150H104Z" fill="#FF8FB8" opacity=".24"/>
+                <path d="M150 24L128 150H172Z" fill="#A9C8DA" opacity=".2"/>
+                <path d="M150 24L196 150H238Z" fill="#E0A93B" opacity=".22"/>
+              </g>
+              <path d="M150 0V10" stroke="#C9B6DA" stroke-width="1.5"/>
+              <circle cx="150" cy="24" r="14" fill="#D9D4E3"/>
+              <path d="M136 24H164M138 17H162M138 31H162" stroke="#8E84A6" stroke-width=".8"/>
+              <ellipse cx="150" cy="24" rx="6" ry="14" fill="none" stroke="#8E84A6" stroke-width=".8"/>
+              <g class="f-sparkle" fill="#FFFFFF"><circle cx="44" cy="38" r="1.6"/><circle cx="262" cy="54" r="1.6"/><circle cx="96" cy="70" r="1.2"/><circle cx="208" cy="30" r="1.3"/><circle cx="120" cy="46" r="1"/><circle cx="182" cy="76" r="1.2"/></g>
+              <text class="f-neon" x="150" y="66" text-anchor="middle">COMING SOON</text>
+              <g fill="#1F1430"><rect x="14" y="72" width="34" height="66"/><rect x="252" y="72" width="34" height="66"/></g>
+              <g fill="#3B2350"><circle cx="31" cy="92" r="8"/><circle cx="31" cy="119" r="11"/><circle cx="269" cy="92" r="8"/><circle cx="269" cy="119" r="11"/></g>
+              <rect x="104" y="96" width="92" height="28" fill="#1F1430"/>
+              <rect x="104" y="96" width="92" height="4" fill="#FF8FB8"/>
+              <ellipse cx="128" cy="94" rx="14" ry="3" fill="#C9B6DA"/><ellipse cx="172" cy="94" rx="14" ry="3" fill="#C9B6DA"/>
+              <g data-dancefloor="0,124,300,26"></g>
+            </g>
+            <g class="fu__face" transform="translate(0 -152)">
+              <rect width="300" height="150" fill="#C9B6DA"/>
+              <rect x="112" y="8" width="76" height="20" rx="3" fill="#3B2350"/>
+              <text class="f-neon f-neon--sm" x="150" y="22.5" text-anchor="middle">NIGHT</text>
+              <g fill="#F4E6D4"><rect x="26" y="38" width="72" height="80"/><rect x="114" y="38" width="72" height="80"/><rect x="202" y="38" width="72" height="80"/></g>
+              <g fill="#5B4570"><rect x="32" y="44" width="60" height="68"/><rect x="120" y="44" width="60" height="68"/><rect x="208" y="44" width="60" height="68"/></g>
+              <g fill="url(#fBlinds)"><rect x="32" y="46" width="60" height="64"/><rect x="120" y="46" width="60" height="64"/><rect x="208" y="46" width="60" height="64"/></g>
+              <rect x="18" y="112" width="264" height="20" fill="url(#fBal)"/>
+              <rect x="16" y="110" width="268" height="4" fill="#F4E6D4"/><rect x="16" y="131" width="268" height="3" fill="#F4E6D4"/>
+            </g>
+          </g>
+          <rect width="300" height="150" fill="none" stroke="#33211E" stroke-width="2"/>
+        </g>
+
+        <!-- 3F: Library -->
+        <g class="fu" data-fu="3" transform="translate(350 190)">
+          <g clip-path="url(#fClip)">
+            <g class="fu__in">
+              <rect width="300" height="150" fill="#8CC2A8"/>
+              <rect x="10" y="10" width="104" height="130" fill="#8A5A44"/><rect x="16" y="16" width="92" height="122" fill="#5E3B2E"/>
+              <rect x="186" y="10" width="104" height="130" fill="#8A5A44"/><rect x="192" y="16" width="92" height="122" fill="#5E3B2E"/>
+              <g fill="#8A5A44"><rect x="16" y="44" width="92" height="4"/><rect x="16" y="72" width="92" height="4"/><rect x="16" y="100" width="92" height="4"/><rect x="16" y="128" width="92" height="4"/><rect x="192" y="44" width="92" height="4"/><rect x="192" y="72" width="92" height="4"/><rect x="192" y="100" width="92" height="4"/><rect x="192" y="128" width="92" height="4"/></g>
+              <g data-books="16,44,108;16,72,108;16,100,108;16,128,108;192,44,284;192,72,284;192,100,284;192,128,284"></g>
+              <path d="M100 14L118 140M110 14L128 140" stroke="#C9A15A" stroke-width="2.4"/>
+              <path d="M102.6 32H112.6M105.2 50H115.2M107.7 68H117.7M110.3 86H120.3M112.9 104H122.9M115.4 122H125.4" stroke="#C9A15A" stroke-width="2"/>
+              <circle class="f-glow" cx="150" cy="34" r="26" fill="url(#fGlow)"/>
+              <path d="M150 0V22" stroke="#33211E" stroke-width="1.5"/>
+              <path d="M141 30L145 22H155L159 30Z" fill="#2F6B55"/>
+              <rect x="124" y="124" width="54" height="14" fill="#9B2D4A"/>
+              <rect x="124" y="122" width="54" height="3" fill="#C9A15A"/>
+              <rect x="140" y="104" width="14" height="4" rx="1.5" fill="#E0A93B"/>
+              <path d="M142 108L140 122M152 108L154 122" stroke="#33211E" stroke-width="1.5"/>
+              <path d="M167 100L170 74" stroke="#8A5A44" stroke-width="3"/>
+              <circle cx="166" cy="104" r="6.5" fill="#C98F55"/><circle cx="165.5" cy="113.5" r="8.5" fill="#C98F55"/><circle cx="165.8" cy="109.5" r="2.4" fill="#33211E"/>
+              <path d="M132 122V100" stroke="#33211E" stroke-width="1.5"/><circle cx="132" cy="98" r="3" fill="#33211E"/>
+              <rect y="138" width="300" height="12" fill="url(#fChk)"/>
+            </g>
+            <g class="fu__face" transform="translate(0 -152)">
+              <rect width="300" height="150" fill="#A9D3BE"/>
+              <rect x="96" y="8" width="108" height="20" fill="#F4E6D4" stroke="#9B2D4A" stroke-width="1.5"/>
+              <text class="f-sign" x="150" y="22.5" text-anchor="middle">LIBRARY</text>
+              <path d="M28 136V70A32 32 0 0 1 92 70V136ZM118 136V70A32 32 0 0 1 182 70V136ZM208 136V70A32 32 0 0 1 272 70V136Z" fill="#F4E6D4"/>
+              <path d="M34 136V70A26 26 0 0 1 86 70V136ZM124 136V70A26 26 0 0 1 176 70V136ZM214 136V70A26 26 0 0 1 266 70V136Z" fill="#FBE3A6"/>
+              <g fill="#C98F55"><rect x="34" y="90" width="52" height="2.5"/><rect x="34" y="114" width="52" height="2.5"/><rect x="124" y="90" width="52" height="2.5"/><rect x="124" y="114" width="52" height="2.5"/><rect x="214" y="90" width="52" height="2.5"/><rect x="214" y="114" width="52" height="2.5"/></g>
+              <g fill="#F4E6D4"><rect x="58.5" y="44" width="3" height="92"/><rect x="148.5" y="44" width="3" height="92"/><rect x="238.5" y="44" width="3" height="92"/><rect x="22" y="136" width="76" height="5"/><rect x="112" y="136" width="76" height="5"/><rect x="202" y="136" width="76" height="5"/></g>
+            </g>
+          </g>
+          <rect width="300" height="150" fill="none" stroke="#33211E" stroke-width="2"/>
+        </g>
+
+        <!-- annotations -->
+        <g class="f-labels" data-flabels>
+          <path d="M296 190V640" stroke="#33211E" stroke-width="1.2" stroke-dasharray="4 4"/>
+          <path d="M290 190H302M290 340H302M290 490H302M290 640H302" stroke="#33211E" stroke-width="1.2"/>
+          <text class="f-dim" transform="translate(280 415) rotate(-90)" text-anchor="middle">ONE IDENTITY · 一个身份</text>
+          <text class="f-num" x="338" y="275" text-anchor="end">3F</text>
+          <text class="f-num" x="338" y="425" text-anchor="end">2F</text>
+          <text class="f-num" x="338" y="575" text-anchor="end">1F</text>
+          <path class="f-lead" d="M652 262H690M652 412H690M652 562H690"/>
+          <text class="f-name" x="700" y="258">LIBRARY</text>
+          <text class="f-zh" x="700" y="281">真实藏书 · 现场不插电音乐</text>
+          <text class="f-st f-st--on" x="700" y="301">OPENS 12.15</text>
+          <text class="f-name" x="700" y="408">NIGHTCLUB</text>
+          <text class="f-zh" x="700" y="431">夜店</text>
+          <text class="f-st" x="700" y="451">PLANNED · 规划中</text>
+          <text class="f-name" x="700" y="558">DINING &amp; BAR</text>
+          <text class="f-zh" x="700" y="581">餐饮 + 酒吧</text>
+          <text class="f-st" x="700" y="601">PLANNED · 规划中</text>
+        </g>
+      </svg>
+
+      <ul class="fold__legend">
+        <li><b>3F · Library</b><span>真实藏书 + 现场不插电音乐</span><em class="is-open">12.15 开业</em></li>
+        <li><b>2F · Nightclub</b><span>夜店</span><em>规划中</em></li>
+        <li><b>1F · Dining &amp; Bar</b><span>餐饮 + 酒吧</span><em>规划中</em></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <p class="stamps__k" data-reveal>Next stops · 下一站</p>
+    <ul class="stamps" data-reveal>
+      <li class="stamp stamp--hz" style="--r:-3deg">
+        <div class="stamp__in">
+          <svg viewBox="0 0 80 60" aria-hidden="true"><path d="M30 8h6v4h-6zM28 12h10l1 6H27zM26 18h14l2 7H24zM24 25h18l2 8H22z" fill="currentColor"/><path d="M4 50Q14 36 24 50Q34 36 44 50Q54 36 64 50Q70 42 76 50" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M2 50H78" stroke="currentColor" stroke-width="2"/><path d="M33 33V50" stroke="currentColor" stroke-width="2"/></svg>
+          <b>Hangzhou</b><span>杭州</span><em>12.15</em>
+        </div>
+        <span class="stamp__post" aria-hidden="true">Opening<br>2026</span>
+      </li>
+      <li class="stamp stamp--sh" style="--r:2deg">
+        <div class="stamp__in">
+          <svg viewBox="0 0 80 60" aria-hidden="true"><path d="M40 2V58" stroke="currentColor" stroke-width="2.4"/><circle cx="40" cy="14" r="4" fill="currentColor"/><circle cx="40" cy="30" r="8" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M30 58L36 36M50 58L44 36" stroke="currentColor" stroke-width="2"/><path d="M12 58V40H20V58M60 58V32H68V58" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 58H76" stroke="currentColor" stroke-width="2"/></svg>
+          <b>Shanghai</b><span>上海</span><em>Coming</em>
+        </div>
+      </li>
+      <li class="stamp stamp--sz" style="--r:-1.5deg">
+        <div class="stamp__in">
+          <svg viewBox="0 0 80 60" aria-hidden="true"><path d="M34 58V12L40 2L46 12V58" fill="none" stroke="currentColor" stroke-width="2.4"/><path d="M36 20H44M36 30H44M36 40H44" stroke="currentColor" stroke-width="1.6"/><path d="M16 58V28H26V58M54 58V22H64V58" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 58H76" stroke="currentColor" stroke-width="2"/></svg>
+          <b>Shenzhen</b><span>深圳</span><em>Coming</em>
+        </div>
+      </li>
+      <li class="stamp stamp--bj" style="--r:2.5deg">
+        <div class="stamp__in">
+          <svg viewBox="0 0 80 60" aria-hidden="true"><path d="M40 4V9M30 16Q40 8 50 16ZM24 28Q40 17 56 28ZM18 41Q40 28 62 41Z" fill="currentColor" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M33 16V21H47V16M27 28V34H53V28M21 41V48H59V41" fill="none" stroke="currentColor" stroke-width="2"/><path d="M10 52H70M4 58H76" stroke="currentColor" stroke-width="2.2"/></svg>
+          <b>Beijing</b><span>北京</span><em>Coming</em>
+        </div>
+      </li>
+    </ul>
+    <p class="stamps__note" data-reveal>后续将在上海、深圳、北京等目标城市，陆续布局同类小综合体。</p>
+  </div>
+</section>
+
+<!-- ============ CHAPTER FOUR: THE LIBRARY ============ -->
+<section class="lib" id="library" data-mode="day" data-chapter="Ch. 4 · The Library · 图书馆">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--cream">
+        <p class="chap__no">Chapter Four</p>
+        <h2 class="chap__title">The Library</h2>
+        <p class="chap__zh">第四章 · 图书馆</p>
+        <p class="chap__sub"><i>In which the day belongs to members, and the night to everyone.</i><span>其中，白天属于会员，夜晚属于所有人。</span></p>
+      </div>
+    </header>
+
+    <h3 class="hl" data-reveal>Not a lounge.<br>Not a bar.<br>A library.</h3>
+    <p class="hl-zh" data-reveal>不是会所，也不是酒吧。<br>是一座真的有书的图书馆。</p>
+    <p class="lede" data-reveal>Something Ventured 的第一家店铺：大量真实藏书，加上现场不插电的音乐，一座复古图书馆式的空间。品味，不需要被大声说出来。</p>
+
+    <div class="lib__stage">
+      <div class="lib__ctl">
+        <button class="switch" type="button" role="switch" aria-checked="false" data-lib-switch data-cursor="LIGHTS" aria-label="Library 夜间模式">
+          <span class="switch__lbl switch__lbl--day">Day<em>白天</em></span>
+          <span class="switch__plate" aria-hidden="true"><i class="switch__screw"></i><span class="switch__slot"><span class="switch__lever"></span></span><i class="switch__screw"></i></span>
+          <span class="switch__lbl switch__lbl--night">Night<em>夜晚</em></span>
+        </button>
+        <p class="lib__status" aria-live="polite">
+          <span data-show="day"><b>Day · Members only</b>白天，Library 仅对会员开放，更接近会员私有的空间。</span>
+          <span data-show="night"><b>Night · Open to all</b>入夜后向公众开放；会员依然享有专属权益。</span>
+        </p>
+      </div>
+
+      <div class="lib__frame">
+        <svg class="lib__svg" viewBox="0 0 1200 680" role="img" aria-labelledby="libTitle">
+          <title id="libTitle">Library 内景：两侧是满墙的真实藏书，中间是一座小舞台，放着一把原声吉他和一支麦克风。</title>
+          <defs>
+            <pattern id="lChk" width="60" height="30" patternUnits="userSpaceOnUse"><rect width="60" height="30" fill="#F2E3CF"/><rect width="30" height="15" fill="#D9BC98"/><rect x="30" y="15" width="30" height="15" fill="#D9BC98"/></pattern>
+            <radialGradient id="lGlow"><stop offset="0" stop-color="#FFD58A" stop-opacity=".95"/><stop offset=".45" stop-color="#FFD58A" stop-opacity=".35"/><stop offset="1" stop-color="#FFD58A" stop-opacity="0"/></radialGradient>
+            <linearGradient id="lSpot" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFE7B0" stop-opacity=".05"/><stop offset="1" stop-color="#FFE7B0" stop-opacity=".42"/></linearGradient>
+            <linearGradient id="lShaft" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#FFF6DA" stop-opacity=".75"/><stop offset="1" stop-color="#FFF6DA" stop-opacity="0"/></linearGradient>
+          </defs>
+
+          <!-- room -->
+          <rect width="1200" height="560" fill="#A9D3BE"/>
+          <rect y="440" width="1200" height="120" fill="#93C4AB"/>
+          <g fill="none" stroke="#F4E6D4" stroke-width="3"><rect x="300" y="456" width="270" height="86"/><rect x="630" y="456" width="270" height="86"/></g>
+          <rect width="1200" height="28" fill="#F4E6D4"/><rect y="28" width="1200" height="5" fill="#E2CFB6"/>
+
+          <!-- windows -->
+          <path d="M305 400V200A75 75 0 0 1 455 200V400ZM745 400V200A75 75 0 0 1 895 200V400Z" fill="#F4E6D4"/>
+          <path d="M316 392V200A64 64 0 0 1 444 200V392ZM756 392V200A64 64 0 0 1 884 200V392Z" fill="#CFE6F0"/>
+          <path d="M380 136V392M316 280H444M820 136V392M756 280H884" stroke="#F4E6D4" stroke-width="6"/>
+          <g fill="#F4E6D4"><rect x="296" y="392" width="168" height="12"/><rect x="736" y="392" width="168" height="12"/></g>
+
+          <!-- clock -->
+          <g transform="translate(600 112)">
+            <circle r="60" fill="#F4E6D4"/><circle r="51" fill="#FBF4EA"/><circle r="51" fill="none" stroke="#9B2D4A" stroke-width="3"/>
+            <circle r="43" fill="none" stroke="#33211E" stroke-width="6" stroke-dasharray="1.6 20.92" transform="rotate(-90.5)"/>
+            <path data-hand="h" d="M0 6V-26" stroke="#33211E" stroke-width="5" stroke-linecap="round"/>
+            <path data-hand="m" d="M0 8V-38" stroke="#33211E" stroke-width="3" stroke-linecap="round"/>
+            <circle r="4.5" fill="#9B2D4A"/>
+            <text class="l-clocklabel" y="28" text-anchor="middle">HANGZHOU</text>
+          </g>
+
+          <!-- bookcases -->
+          <rect x="16" y="40" width="262" height="14" fill="#9A6A50"/><rect x="922" y="40" width="262" height="14" fill="#9A6A50"/>
+          <rect x="22" y="54" width="250" height="506" fill="#9A6A50"/><rect x="928" y="54" width="250" height="506" fill="#9A6A50"/>
+          <rect x="36" y="66" width="222" height="482" fill="#5E3B2E"/><rect x="942" y="66" width="222" height="482" fill="#5E3B2E"/>
+          <g fill="#9A6A50"><rect x="36" y="132" width="222" height="8"/><rect x="36" y="202" width="222" height="8"/><rect x="36" y="272" width="222" height="8"/><rect x="36" y="342" width="222" height="8"/><rect x="36" y="412" width="222" height="8"/><rect x="36" y="482" width="222" height="8"/><rect x="942" y="132" width="222" height="8"/><rect x="942" y="202" width="222" height="8"/><rect x="942" y="272" width="222" height="8"/><rect x="942" y="342" width="222" height="8"/><rect x="942" y="412" width="222" height="8"/><rect x="942" y="482" width="222" height="8"/></g>
+          <g data-books="38,132,256;38,202,256;38,272,256;38,342,256;38,412,256;38,482,256;38,548,256;944,132,1162;944,202,1162;944,272,1162;944,342,1162;944,412,1162;944,482,1162;944,548,1162" data-scale="2.25"></g>
+
+          <!-- ladders -->
+          <g data-ladder="236,64,292,560,26;964,64,908,560,-26" stroke="#C9A15A" stroke-width="5" stroke-linecap="round"></g>
+
+          <!-- stage -->
+          <path d="M462 300H738V322Q724 336 710 322Q696 336 682 322Q668 336 654 322Q640 336 626 322Q612 336 600 322Q588 336 574 322Q560 336 546 322Q532 336 518 322Q504 336 490 322Q476 336 462 322Z" fill="#9B2D4A"/>
+          <path d="M466 322H500L494 470H470ZM700 322H734L730 470H706Z" fill="#9B2D4A"/>
+          <path d="M478 330L476 468M488 330L485 468M712 330L715 468M722 330L726 468" stroke="#7B1E3A" stroke-width="2"/>
+          <rect x="478" y="466" width="244" height="6" fill="#C9A15A"/>
+          <rect x="482" y="472" width="236" height="30" fill="#9B2D4A"/>
+          <rect x="589" y="418" width="24" height="7" rx="2" fill="#E0A93B"/>
+          <path d="M593 425L589 466M609 425L613 466" stroke="#33211E" stroke-width="3"/>
+          <path d="M654 412L659 356" stroke="#8A5A44" stroke-width="6"/>
+          <circle cx="652" cy="424" r="15" fill="#C98F55"/><circle cx="651" cy="446" r="19" fill="#C98F55"/><circle cx="651.5" cy="437" r="5" fill="#33211E"/>
+          <path d="M640 466L648 452M662 466L654 452" stroke="#33211E" stroke-width="2.5"/>
+          <path d="M552 466V408" stroke="#33211E" stroke-width="3"/><circle cx="552" cy="403" r="6" fill="#33211E"/><ellipse cx="552" cy="467" rx="12" ry="3" fill="#33211E"/>
+
+          <!-- floor -->
+          <rect y="556" width="1200" height="8" fill="#F4E6D4"/>
+          <rect y="564" width="1200" height="116" fill="url(#lChk)"/>
+          <ellipse cx="600" cy="640" rx="300" ry="30" fill="#C55A6E"/>
+          <ellipse cx="600" cy="640" rx="284" ry="23" fill="none" stroke="#F4E6D4" stroke-width="2" stroke-dasharray="6 6"/>
+
+          <!-- reading table -->
+          <rect x="360" y="588" width="480" height="12" fill="#9A6A50"/>
+          <rect x="370" y="600" width="460" height="14" fill="#7E523E"/>
+          <rect x="378" y="614" width="14" height="50" fill="#7E523E"/><rect x="808" y="614" width="14" height="50" fill="#7E523E"/>
+          <g fill="#C9A15A"><ellipse cx="480" cy="588" rx="16" ry="4"/><rect x="478" y="556" width="4" height="32"/><ellipse cx="720" cy="588" rx="16" ry="4"/><rect x="718" y="556" width="4" height="32"/></g>
+          <path d="M454 562Q480 536 506 562ZM694 562Q720 536 746 562Z" fill="#2F6B55"/>
+          <g fill="#9B2D4A"><rect x="584" y="578" width="34" height="10"/></g><rect x="588" y="570" width="28" height="8" fill="#E0A93B"/><rect x="586" y="563" width="30" height="7" fill="#A9C8DA"/>
+
+          <!-- potted palm (right) -->
+          <g transform="translate(1046 588)"><rect x="-22" y="40" width="44" height="52" fill="#9B2D4A"/><rect x="-26" y="34" width="52" height="8" fill="#7B1E3A"/><path d="M0 36C-4 10-30 0-46 6C-26 8-12 20 0 36ZM0 36C4 10 30 0 46 6C26 8 12 20 0 36ZM0 36C-2 6-8-20-2-34C4-18 6 10 0 36Z" fill="#2F6B55"/></g>
+
+          <!-- daylight -->
+          <path class="l-shaft" d="M318 392H442L476 664H246ZM758 392H882L954 664H724Z" fill="url(#lShaft)"/>
+
+          <!-- night tint -->
+          <rect class="l-tint" width="1200" height="680" fill="#0C1A26"/>
+
+          <!-- lit at night -->
+          <g class="l-night">
+            <path d="M316 392V200A64 64 0 0 1 444 200V392ZM756 392V200A64 64 0 0 1 884 200V392Z" fill="#1B2447"/>
+            <path d="M380 136V392M316 280H444M820 136V392M756 280H884" stroke="#3B3F55" stroke-width="6"/>
+            <g fill="#FFF3D2"><circle cx="340" cy="220" r="1.8"/><circle cx="420" cy="196" r="1.4"/><circle cx="396" cy="250" r="1.2"/><circle cx="352" cy="330" r="1.5"/><circle cx="428" cy="300" r="1.2"/><circle cx="776" cy="320" r="1.4"/><circle cx="866" cy="236" r="1.3"/><circle cx="790" cy="214" r="1.6"/><circle cx="860" cy="350" r="1.2"/></g>
+            <circle cx="846" cy="196" r="18" fill="#F8EBC8"/><circle cx="854" cy="190" r="16" fill="#1B2447"/>
+            <path d="M556 32H644L752 470H448Z" fill="url(#lSpot)"/>
+            <circle cx="480" cy="566" r="110" fill="url(#lGlow)"/>
+            <circle cx="720" cy="566" r="110" fill="url(#lGlow)"/>
+            <path d="M454 562Q480 536 506 562ZM694 562Q720 536 746 562Z" fill="#3E8C6E"/>
+          </g>
+
+          <!-- string lights -->
+          <path d="M262 50Q600 140 938 50" fill="none" stroke="#33211E" stroke-width="1.6" opacity=".55"/>
+          <g data-stringlights="262,50,600,140,938,50,17"></g>
+
+          <!-- sign -->
+          <g transform="translate(120 572)">
+            <path d="M12 64L4 100M108 64L116 100" stroke="#33211E" stroke-width="3"/>
+            <rect width="120" height="66" fill="#FBF4EA" stroke="#33211E" stroke-width="2.5"/>
+            <rect x="6" y="6" width="108" height="54" fill="none" stroke="#9B2D4A" stroke-width="1.2"/>
+            <g class="l-sign-day"><text class="l-signt" x="60" y="30" text-anchor="middle">MEMBERS ONLY</text><text class="l-signz" x="60" y="50" text-anchor="middle">会员时段</text></g>
+            <g class="l-sign-night"><text class="l-signt" x="60" y="30" text-anchor="middle">OPEN TO ALL</text><text class="l-signz" x="60" y="50" text-anchor="middle">向公众开放</text></g>
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <div class="lib__below">
+      <ul class="lib__feats">
+        <li data-reveal><b>Real books</b><span>大量真实藏书，不是一面装饰墙。</span></li>
+        <li data-reveal style="--d:1"><b>Unplugged, live</b><span>现场不插电音乐。</span></li>
+        <li data-reveal style="--d:2"><b>A reading room</b><span>复古图书馆式空间。</span></li>
+      </ul>
+      <figure class="libcard" data-reveal aria-label="Library 借书卡：开业日期 2026 年 12 月 15 日">
+        <p class="libcard__insert">Insert · 借书卡</p>
+        <div class="libcard__card">
+          <div class="libcard__head"><span>SV 001.26</span><span>3F · Hangzhou</span></div>
+          <p class="libcard__title">Library</p>
+          <p class="libcard__sub">a Something Ventured house</p>
+          <table class="libcard__grid">
+            <thead><tr><th scope="col">Date due</th><th scope="col">Borrower</th></tr></thead>
+            <tbody>
+              <tr><td><span class="stampink">DEC 15 2026</span></td><td class="hand">Opening · <span>开业</span></td></tr>
+              <tr><td></td><td></td></tr>
+              <tr><td></td><td></td></tr>
+              <tr><td></td><td class="hand hand--soft">you?</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER FIVE: MEMBERSHIP ============ -->
+<section class="ch ch--mem" id="membership" data-chapter="Ch. 5 · Membership · 入会">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--lav">
+        <p class="chap__no">Chapter Five</p>
+        <h2 class="chap__title">By Referral Only</h2>
+        <p class="chap__zh">第五章 · 仅限推荐</p>
+        <p class="chap__sub"><i>In which one is introduced, considered, and welcomed.</i><span>其中，一个人被推荐、被考虑，然后被欢迎。</span></p>
+      </div>
+    </header>
+    <p class="lede" data-reveal>Something Ventured 采用推荐制与筛选制：会员需经推荐，并通过筛选。</p>
+  </div>
+
+  <div class="track" data-scene="track">
+    <div class="track__sticky">
+      <div class="track__rail" data-rail>
+        <article class="room room--pink">
+          <div class="room__set">
+            <svg viewBox="0 0 240 180" aria-hidden="true" class="room__prop prop--env">
+              <rect x="40" y="50" width="160" height="100" fill="#FBF4EA" stroke="#33211E" stroke-width="2.5"/>
+              <path d="M40 150L104 100M200 150L136 100" stroke="#33211E" stroke-width="2" fill="none"/>
+              <path d="M40 50L120 112L200 50" fill="#F4E6D4" stroke="#33211E" stroke-width="2.5" stroke-linejoin="round"/>
+              <g class="prop__seal"><circle cx="120" cy="110" r="19" fill="#9B2D4A"/><circle cx="120" cy="110" r="14" fill="none" stroke="#7B1E3A" stroke-width="2"/><text class="prop__sv" x="120" y="115" text-anchor="middle">SV</text></g>
+            </svg>
+          </div>
+          <div class="room__txt"><p class="room__no">01</p><h3>Referral</h3><p class="room__zh">推荐</p><p>由现有会员推荐。</p></div>
+        </article>
+        <article class="room room--powder">
+          <div class="room__set">
+            <svg viewBox="0 0 240 180" aria-hidden="true" class="room__prop prop--dos">
+              <rect x="46" y="36" width="52" height="16" rx="3" fill="#C48A1E"/>
+              <rect x="44" y="46" width="150" height="104" fill="#C48A1E"/>
+              <rect x="44" y="58" width="150" height="92" fill="#E0A93B"/>
+              <rect x="70" y="72" width="98" height="22" fill="#FBF4EA"/>
+              <text class="prop__label" x="119" y="87" text-anchor="middle">DOSSIER</text>
+              <g transform="rotate(-8 118 122)"><rect x="70" y="108" width="96" height="26" fill="none" stroke="#9B2D4A" stroke-width="2.5"/><text class="prop__stamp" x="118" y="126" text-anchor="middle">CONFIDENTIAL</text></g>
+              <g class="prop__lens"><circle cx="182" cy="122" r="22" fill="#A9C8DA" fill-opacity=".45" stroke="#33211E" stroke-width="5"/><path d="M198 138L220 160" stroke="#33211E" stroke-width="8" stroke-linecap="round"/></g>
+            </svg>
+          </div>
+          <div class="room__txt"><p class="room__no">02</p><h3>Screening</h3><p class="room__zh">筛选</p><p>通过俱乐部的筛选。</p></div>
+        </article>
+        <article class="room room--lav">
+          <div class="room__set">
+            <svg viewBox="0 0 240 180" aria-hidden="true" class="room__prop prop--cur">
+              <rect x="30" y="18" width="180" height="148" fill="#E0A93B"/>
+              <rect x="40" y="28" width="160" height="128" fill="#3B2350"/>
+              <path d="M40 28H120V156H96Q100 110 84 70Q66 40 40 40Z" fill="#9B2D4A"/>
+              <path d="M200 28H120V156H144Q140 110 156 70Q174 40 200 40Z" fill="#9B2D4A"/>
+              <path d="M58 40Q70 100 76 156M84 30Q96 100 100 156M182 40Q170 100 164 156M156 30Q144 100 140 156" stroke="#7B1E3A" stroke-width="2.2" fill="none"/>
+              <path d="M30 18H210V34Q195 46 180 34Q165 46 150 34Q135 46 120 34Q105 46 90 34Q75 46 60 34Q45 46 30 34Z" fill="#9B2D4A"/>
+              <text class="prop__q" x="120" y="122" text-anchor="middle">?</text>
+              <rect x="22" y="160" width="196" height="8" fill="#C48A1E"/>
+            </svg>
+          </div>
+          <div class="room__txt"><p class="room__no">03</p><h3>Initiation</h3><p class="room__zh">入会仪式</p><p>一场专门的入会仪式。形式，入会时揭晓。</p></div>
+        </article>
+        <article class="room room--mint">
+          <div class="room__set">
+            <svg viewBox="0 0 240 180" aria-hidden="true" class="room__prop prop--gift">
+              <rect x="34" y="80" width="96" height="70" fill="#A9D3BE" stroke="#33211E" stroke-width="2.5"/>
+              <rect x="28" y="66" width="108" height="18" fill="#BFE0CF" stroke="#33211E" stroke-width="2.5"/>
+              <rect x="76" y="66" width="12" height="84" fill="#9B2D4A"/>
+              <g class="prop__bow"><path d="M82 66C64 44 50 54 60 64C66 70 76 68 82 66ZM82 66C100 44 114 54 104 64C98 70 88 68 82 66Z" fill="#9B2D4A" stroke="#7B1E3A" stroke-width="2"/></g>
+              <g transform="rotate(10 168 110)"><rect x="146" y="80" width="46" height="66" rx="5" fill="#EFC3C1" stroke="#33211E" stroke-width="2"/><text class="prop__sv prop__sv--ink" x="169" y="117" text-anchor="middle">SV</text></g>
+              <g class="prop__bell"><circle cx="196" cy="128" r="3" fill="#C48A1E"/><path d="M178 148a18 18 0 0 1 36 0z" fill="#E0A93B"/><rect x="172" y="148" width="48" height="5" rx="2" fill="#C48A1E"/></g>
+              <rect x="16" y="152" width="208" height="5" fill="#33211E" opacity=".15"/>
+            </svg>
+          </div>
+          <div class="room__txt"><p class="room__no">04</p><h3>Welcome</h3><p class="room__zh">欢迎</p><p>入会礼包、虚拟会员身份，以及专门的服务人员。</p></div>
+        </article>
+      </div>
+      <div class="track__dots" aria-hidden="true"><i class="is-on"></i><i></i><i></i><i></i></div>
+    </div>
+  </div>
+
+  <div class="wrap">
+    <div class="marquee" data-marquee>
+      <div class="marquee__sign">
+        <span class="marquee__bulbs marquee__bulbs--a" aria-hidden="true"></span>
+        <span class="marquee__bulbs marquee__bulbs--b" aria-hidden="true"></span>
+        <p class="marquee__k">Coming attractions</p>
+        <p class="marquee__z">即将上映 · 专享活动与服务</p>
+      </div>
+      <div class="marquee__board">
+        <div class="mq"><p class="mq__line" data-letters>Closed-door sessions</p><p class="mq__zh">行业闭门分享 · 筹备中</p></div>
+        <div class="mq"><p class="mq__line" data-letters>Live podcast tapings</p><p class="mq__zh">视频播客现场录制 · 筹备中</p></div>
+        <div class="mq"><p class="mq__line" data-letters>Cross-city services</p><p class="mq__zh">跨城市落地服务 · 未来计划</p></div>
+      </div>
+      <p class="marquee__note">专享活动与服务正在筹备中，以上是其中可能的几种形式。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CHAPTER SIX: THE INTRODUCTION ============ -->
+<section class="ch ch--apply" id="apply" data-chapter="Ch. 6 · Introduction · 申请">
+  <div class="wrap">
+    <header class="chap" data-reveal>
+      <div class="chap__card chap__card--pink">
+        <p class="chap__no">Chapter Six</p>
+        <h2 class="chap__title">The Introduction</h2>
+        <p class="chap__zh">第六章 · 申请推荐入会</p>
+        <p class="chap__sub"><i>In which you ring the bell.</i><span>其中，你按响了前台的铃。</span></p>
+      </div>
+    </header>
+    <h3 class="hl" data-reveal>Request an<br>introduction.</h3>
+    <p class="lede" data-reveal>已有会员推荐？请填写推荐人。暂时没有？也可以先留下信息，我们会在合适的时候与你联系。</p>
+
+    <div class="desk">
+      <!--
+        上线前：把 data-endpoint 设为接收表单的接口地址（POST JSON）。
+        留空时表单只在本地演示提交效果，不会发送任何数据。
+      -->
+      <form class="reg" id="apply-form" data-endpoint="" novalidate>
+        <header class="reg__head">
+          <p class="reg__k">Registration · 登记卡</p>
+          <p class="reg__t">Something Ventured</p>
+          <p class="reg__fine">Non-binding · Subject to screening　本申请不具约束力，以俱乐部筛选结果为准。</p>
+        </header>
+
+        <div class="field">
+          <label for="f-name"><span>Name</span>姓名 <i>*</i></label>
+          <input id="f-name" name="name" type="text" required autocomplete="name" placeholder="你的名字" maxlength="40">
+        </div>
+        <div class="field">
+          <label for="f-venture"><span>Venture &amp; role</span>公司 / 职位 <i>*</i></label>
+          <input id="f-venture" name="venture" type="text" required autocomplete="organization" placeholder="例如：某具身智能公司 · 创始人" maxlength="80">
+        </div>
+        <div class="field" role="radiogroup" aria-labelledby="g-sector" aria-required="true">
+          <p class="field__l" id="g-sector"><span>Sector</span>领域 <i>*</i></p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="sector" value="AI" id="s-ai"><span>AI</span></label>
+            <label class="chip"><input type="radio" name="sector" value="VC" id="s-vc"><span>VC</span></label>
+            <label class="chip"><input type="radio" name="sector" value="Robotics" id="s-rb"><span>Robotics 机器人</span></label>
+            <label class="chip"><input type="radio" name="sector" value="Frontier" id="s-fr"><span>Other frontier 其他前沿</span></label>
+          </div>
+        </div>
+        <div class="field" role="radiogroup" aria-labelledby="g-base">
+          <p class="field__l" id="g-base"><span>Base</span>常驻城市</p>
+          <div class="chips">
+            <label class="chip"><input type="radio" name="base" value="Hangzhou" id="b-hz"><span>杭州</span></label>
+            <label class="chip"><input type="radio" name="base" value="Shanghai" id="b-sh"><span>上海</span></label>
+            <label class="chip"><input type="radio" name="base" value="Shenzhen" id="b-sz"><span>深圳</span></label>
+            <label class="chip"><input type="radio" name="base" value="Beijing" id="b-bj"><span>北京</span></label>
+            <label class="chip"><input type="radio" name="base" value="Elsewhere" id="b-el"><span>其他</span></label>
+          </div>
+        </div>
+        <div class="field">
+          <label for="f-lead"><span>Lead</span>推荐人 <em>选填</em></label>
+          <input id="f-lead" name="lead" type="text" placeholder="推荐你的会员姓名（如有）" maxlength="40">
+        </div>
+        <div class="field">
+          <label for="f-contact"><span>Contact</span>联系方式 <i>*</i></label>
+          <input id="f-contact" name="contact" type="text" required placeholder="微信号 / 手机 / 邮箱" maxlength="80">
+        </div>
+        <div class="field">
+          <label for="f-thesis"><span>Thesis</span>最近在押注什么？ <em>选填</em></label>
+          <textarea id="f-thesis" name="thesis" rows="2" placeholder="一句话就够了。" maxlength="280"></textarea>
+        </div>
+        <div class="hp" aria-hidden="true"><label for="f-web">Website</label><input id="f-web" type="text" name="company_website" tabindex="-1" autocomplete="off"></div>
+
+        <div class="reg__foot">
+          <button class="btn btn--rasp btn--bell" type="submit" data-magnetic data-cursor="RING"><svg aria-hidden="true"><use href="#iBell"/></svg>Ring for service<span>提交申请</span></button>
+          <p class="reg__err" role="alert"></p>
+        </div>
+
+        <div class="reg__done" tabindex="-1">
+          <p class="reg__k">Received · 已收到</p>
+          <p class="reg__done-h">Due diligence in progress.</p>
+          <p>尽调进行中。我们会通过你留下的联系方式与你联系。</p>
+        </div>
+      </form>
+
+      <aside class="cardwrap" aria-label="会员卡预览">
+        <div class="mcard" data-mcard data-cursor="FLIP" role="button" tabindex="0" aria-pressed="false" aria-label="会员卡预览，按下翻面">
+          <div class="mcard__flip">
+            <div class="mcard__face mcard__front">
+              <div class="mcard__guil" aria-hidden="true"></div>
+              <div class="mcard__border" aria-hidden="true"></div>
+              <svg class="mcard__crest" viewBox="0 0 60 60" aria-hidden="true"><circle cx="30" cy="30" r="27" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="30" cy="30" r="22" fill="none" stroke="currentColor" stroke-width=".8"/><text x="30" y="36" text-anchor="middle">SV</text></svg>
+              <p class="mcard__brand">Something Ventured</p>
+              <p class="mcard__role">Member · 会员</p>
+              <p class="mcard__name" data-card-name>Your Name</p>
+              <p class="mcard__meta"><span data-card-sector>Sector</span> · <span data-card-base>Base</span></p>
+              <div class="mcard__foot"><span>No. ————</span><span>HZ · SH · SZ · BJ</span></div>
+              <span class="mcard__foil" aria-hidden="true"></span>
+              <span class="mcard__glare" aria-hidden="true"></span>
+              <span class="mcard__stamp" aria-hidden="true">In diligence<small>尽调中</small></span>
+            </div>
+            <div class="mcard__face mcard__back" aria-hidden="true">
+              <div class="mcard__stripe"></div>
+              <p class="mcard__bk">Valid at every house of</p>
+              <p class="mcard__bb">Something Ventured</p>
+              <p class="mcard__bz">会员身份，跨城市通用</p>
+              <ul class="mcard__cities"><li class="is-on">Hangzhou<em>12.15</em></li><li>Shanghai</li><li>Shenzhen</li><li>Beijing</li></ul>
+              <div class="mcard__sig"><span>Lead · 推荐人</span><b data-card-lead>—</b></div>
+            </div>
+          </div>
+        </div>
+        <div class="cardctl">
+          <button type="button" class="cardctl__b" data-flip aria-pressed="false" data-cursor="FLIP">Flip<span>翻面</span></button>
+          <button type="button" class="cardctl__b" data-gyro hidden>Tilt<span>倾斜手机看光泽</span></button>
+        </div>
+        <p class="cardwrap__note">虚拟会员身份 · Preview</p>
+      </aside>
+    </div>
+  </div>
+</section>
+</main>
+
+<!-- ============ END CREDITS ============ -->
+<footer class="credits" id="credits" data-chapter="End credits · 片尾">
+  <div class="wrap credits__roll">
+    <p class="credits__logo">Something Ventured</p>
+    <p class="credits__sub">a members’ club</p>
+    <dl class="credits__list">
+      <div><dt>First house</dt><dd>3F Library, Hangzhou</dd></div>
+      <div><dt>Opening</dt><dd>15 · 12 · 2026</dd></div>
+      <div><dt>Coming</dt><dd>2F Nightclub · 1F Dining &amp; Bar</dd></div>
+      <div><dt>Cities</dt><dd>Hangzhou · Shanghai · Shenzhen · Beijing</dd></div>
+      <div><dt>Membership</dt><dd>By referral only</dd></div>
+      <div><dt>Starring</dt><dd>You?</dd></div>
+    </dl>
+    <p class="credits__disc">No moments in this club were generated.<span>本俱乐部内的一切时刻，均未经生成。</span></p>
+    <p class="credits__fin">Fin.</p>
+    <div class="credits__act">
+      <a class="btn btn--ghost" href="#apply" data-cursor="APPLY">Request an introduction<span>申请推荐入会</span></a>
+      <a class="credits__rewind" href="#top" data-cursor="REWIND"><span aria-hidden="true">↺</span> Rewind<span class="credits__zh">回到开头</span></a>
+    </div>
+    <p class="credits__copy">© 2026 sth. ventured · Nothing ventured, nothing gained.</p>
+  </div>
+</footer>
+
+<!-- ============ concierge (⌘K) ============ -->
+<div class="concierge" data-concierge hidden>
+  <div class="concierge__scrim" data-concierge-close></div>
+  <div class="concierge__card" role="dialog" aria-modal="true" aria-labelledby="cg-title">
+    <svg class="concierge__bell" aria-hidden="true"><use href="#iBell"/></svg>
+    <p class="concierge__k">The Concierge · 礼宾台</p>
+    <h2 class="concierge__q" id="cg-title">Where may I direct you?</h2>
+    <label class="sr" for="cg-input">输入目的地</label>
+    <input class="concierge__input" id="cg-input" type="text" placeholder="Type a destination · 输入目的地" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="cg-list" aria-autocomplete="list">
+    <ul class="concierge__list" id="cg-list" role="listbox" aria-label="目的地" data-concierge-list>
+      <li role="option" id="cg-o0" data-go="#trailer" data-k="trailer manifesto 预告 宣言"><span class="cg-no">00</span><span class="cg-t">The Trailer<em>预告片</em></span><kbd>0</kbd></li>
+      <li role="option" id="cg-o1" data-go="#name" data-k="name documentary 名字 纪录片"><span class="cg-no">01</span><span class="cg-t">The Name<em>关于名字</em></span><kbd>1</kbd></li>
+      <li role="option" id="cg-o2" data-go="#club" data-k="club key member 俱乐部 会员 钥匙"><span class="cg-no">02</span><span class="cg-t">The Club<em>俱乐部</em></span><kbd>2</kbd></li>
+      <li role="option" id="cg-o3" data-go="#hangzhou" data-k="hangzhou building fold 杭州 折叠"><span class="cg-no">03</span><span class="cg-t">Hangzhou<em>折叠空间</em></span><kbd>3</kbd></li>
+      <li role="option" id="cg-o4" data-go="#library" data-k="library books music 图书馆 藏书"><span class="cg-no">04</span><span class="cg-t">The Library<em>图书馆</em></span><kbd>4</kbd></li>
+      <li role="option" id="cg-o5" data-go="#membership" data-k="membership referral 入会 推荐"><span class="cg-no">05</span><span class="cg-t">Membership<em>仅限推荐</em></span><kbd>5</kbd></li>
+      <li role="option" id="cg-o6" data-go="#apply" data-k="apply introduction 申请 推荐"><span class="cg-no">06</span><span class="cg-t">Request an introduction<em>申请推荐入会</em></span><kbd>6</kbd></li>
+      <li role="option" id="cg-o7" data-act="lights" data-k="lights day night 灯 白天 夜晚"><span class="cg-no">✦</span><span class="cg-t">Switch the Library lights<em>切换昼夜</em></span></li>
+      <li role="option" id="cg-o8" data-act="sound" data-k="sound music audio 音乐 声音"><span class="cg-no">♪</span><span class="cg-t"><span data-cg-sound>Sound on</span><em>音乐开关</em></span></li>
+      <li role="option" id="cg-o9" data-go="#credits" data-k="credits end 片尾"><span class="cg-no">∎</span><span class="cg-t">End credits<em>片尾</em></span></li>
+    </ul>
+    <p class="concierge__foot">↑ ↓ choose · ↵ go · esc close</p>
+  </div>
+</div>
+</body>
+</html>

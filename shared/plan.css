@@ -1,0 +1,56 @@
+/* =========================================================
+   library live · the floor plan as ink on paper (shared/plan.js → planSVG)
+   Used by the public layer of the member app and by the back-office board.
+   Needs --mono, --sans, --serif, --futura and --ease from the page's stylesheet.
+   ========================================================= */
+@keyframes sp-blink { 50% { opacity: .2; } }
+.splan { display: block; width: 100%; height: auto; box-shadow: 0 16px 30px -22px rgba(0, 0, 0, .7); }
+.sp-paper { fill: #FFFCF3; }
+:root[data-mode="night"] .sp-paper, :root[data-mode="closed"] .sp-paper { fill: #F4EDDC; }
+.sp-grid { fill: none; stroke: rgba(95, 140, 180, .14); stroke-width: 1; }
+.sp-wall { fill: none; stroke: #201B16; stroke-width: 4; }
+.sp-wall-thin, .sp-thin { stroke: #201B16; stroke-width: 1; }
+.sp-window { stroke: #201B16; stroke-width: 4; stroke-dasharray: 2 3; }
+.sp-hatch-bg { fill: #F1E9D6; }
+.sp-hatch-fg { fill: rgba(32, 27, 22, .25); }
+.sp-boh { stroke: rgba(32, 27, 22, .4); }
+.sp-furn { fill: #EADFC8; stroke: rgba(32, 27, 22, .45); stroke-width: 1; }
+.sp-ink { fill: #201B16; }
+.sp-ink-soft { fill: #6E5B45; }
+.sp-stage { fill: rgba(180, 138, 62, .16); stroke: #201B16; stroke-width: 1.5; }
+.sp-stage-label { font: 600 13px var(--mono); letter-spacing: .3em; fill: #201B16; }
+.sp-small { font: 500 8.5px var(--sans); fill: #5A4E42; }
+.sp-label { font: 600 9.5px var(--sans); fill: #201B16; }
+.sp-arrow { fill: none; stroke: #201B16; stroke-width: 1.5; }
+.sp-booth { fill: #FFFCF3; stroke: #201B16; stroke-width: 1.5; }
+.sp-code { font: 600 10px var(--mono); fill: #201B16; }
+.sp-year { font: italic 400 11px var(--serif); fill: #5A4E42; }
+.sp-table { fill: #FFFCF3; stroke: #201B16; stroke-width: 1.2; }
+.sp-mini { font: 500 7.5px var(--mono); fill: #5A4E42; }
+.sp-seat { fill: #FFFCF3; stroke: #201B16; stroke-width: 1; }
+.sp-seat-on { fill: #201B16; }
+.t-booked .sp-booth, .t-offline .sp-booth { fill: url(#sp-hatch); }
+.t-booked .sp-code, .t-booked .sp-year { opacity: .45; }
+.sp-stamp { fill: none; stroke: #A3353A; stroke-width: 2; }
+.sp-stamp-t { font: 700 10px var(--sans); fill: #A3353A; letter-spacing: 2px; }
+.t-reserved_open .sp-booth, .t-reserved_sealed .sp-booth { stroke: #B48A3E; stroke-width: 2.5; }
+.t-mine .sp-booth { fill: #E4EFE7; stroke: #2E5A4C; stroke-width: 2.5; }
+.sp-mine { fill: #FFFCF3; stroke: #2E5A4C; stroke-width: 2; }
+.sp-mine-t { font: 700 11px var(--sans); fill: #2E5A4C; }
+.t-locking .sp-booth { stroke-dasharray: 4 3; }
+.t-paused .sp-booth, .t-paused .sp-table { opacity: .35; }
+.sp-seal path { fill: #A3353A; }
+.sp-seal-t { font: 700 7.5px var(--futura); fill: rgba(255, 240, 230, .85); }
+.sp-seal { filter: drop-shadow(0 2px 2px rgba(80, 20, 30, .4)); }
+.sp-seal path, .sp-seal text { transform-box: fill-box; transform-origin: center; }
+.sp-seal.is-cracking .sp-seal-l { animation: crackL 1.4s var(--ease) forwards; }
+.sp-seal.is-cracking .sp-seal-r { animation: crackR 1.4s var(--ease) forwards; }
+.sp-seal.is-cracking .sp-seal-t { animation: fadeout .4s forwards; }
+@keyframes crackL { 30% { transform: translate(-2px, 1px) rotate(-6deg); } to { transform: translate(-10px, 9px) rotate(-30deg); opacity: 0; } }
+@keyframes crackR { 30% { transform: translate(2px, 1px) rotate(6deg); } to { transform: translate(10px, 11px) rotate(26deg); opacity: 0; } }
+@keyframes fadeout { to { opacity: 0; } }
+.sp-pulse { fill: #A3353A; animation: sp-blink 1s steps(1) infinite; }
+.sp-zone { fill: transparent; stroke: transparent; stroke-width: 1.5; cursor: pointer; outline: none; }
+.sp-zone:hover, .sp-zone:focus-visible { fill: rgba(46, 90, 76, .06); stroke: rgba(46, 90, 76, .4); stroke-dasharray: 4 3; }
+.sp-zlabel { font: italic 600 10px var(--serif); fill: #2E5A4C; pointer-events: none; }
+.splan[data-sel="round"] .sp-zone[data-zone="round"], .splan[data-sel="wall"] .sp-zone[data-zone="wall"], .splan[data-sel="lounge"] .sp-zone[data-zone="lounge"], .splan[data-sel="pit"] .sp-zone[data-zone="pit"], .splan[data-sel="tables"] .sp-zone[data-zone="tables"], .splan[data-sel="bar"] .sp-zone[data-zone="bar"], .splan[data-sel="pairs"] .sp-zone[data-zone="pairs"] { fill: rgba(46, 90, 76, .12); stroke: #2E5A4C; stroke-dasharray: none; stroke-width: 2; }
