@@ -1,16 +1,16 @@
 {
   "id": "./",
-  "name": "library live · sth.ventured",
-  "short_name": "Ventured",
-  "description": "sth.ventured · library live（杭州武林路 9 号）：今晚节目、按区域订座、会员时间、活动与会员卡。",
+  "name": "library live",
+  "short_name": "library live",
+  "description": "library live（杭州武林路 9 号）：订座、白天座谈、会员邀请。",
   "lang": "zh-CN",
   "dir": "ltr",
-  "start_url": "./#/home",
+  "start_url": "./#/book",
   "scope": "./",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#0A0806",
-  "theme_color": "#0F1F19",
+  "background_color": "#F4F3EF",
+  "theme_color": "#F4F3EF",
   "categories": [
     "lifestyle",
     "social"
@@ -43,8 +43,8 @@
   ],
   "shortcuts": [
     {
-      "name": "按区域订座",
-      "short_name": "预订",
+      "name": "订座",
+      "short_name": "订座",
       "url": "./#/book",
       "icons": [
         {
@@ -54,9 +54,9 @@
       ]
     },
     {
-      "name": "活动",
-      "short_name": "活动",
-      "url": "./#/events",
+      "name": "白天座谈",
+      "short_name": "座谈",
+      "url": "./#/talks",
       "icons": [
         {
           "src": "icons/icon-192.png",
@@ -65,7 +65,7 @@
       ]
     },
     {
-      "name": "会员卡",
+      "name": "我的",
       "short_name": "我的",
       "url": "./#/me",
       "icons": [

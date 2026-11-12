@@ -398,6 +398,13 @@ export function seed(t = Date.now()) {
   ev('ev-hand', 'panel', '闭门分享：机器人的手', 'The Robot’s Hand', -5, '15:00', '17:00', 1, 20, { host: '季长风', guests: '叶闻舟', intro: '灵巧手为什么这么难？两位一线工程师讲他们拆坏过的东西。不录音外传，只给到场的人回放。', hook: '两位一线工程师，讲他们拆坏过的东西。' });
   ev('ev-agent', 'roundtable', '开放座谈：AI Agent 的商业模式', 'Roundtable: The Agent Business', 0, '15:00', '16:30', 1, 12, { host: '陈牧之', intro: '一张圆桌，一个话题。带着你的观点或问题来，谁都可以坐下。', hook: '一张圆桌，一个话题，谁都可以坐下。', location: '圆桌座谈 · 1957' });
   ev('ev-read', 'roundtable', '早间座谈：读《The Power Law》第三章', 'Morning Read: The Power Law, ch. 3', 1, '11:00', '12:00', 1, 10, { host: '周以宁', intro: '读完第三章即可加入。书在 3F 书架，可以现场借。', hook: '读完第三章即可加入。', location: '座谈沙龙' });
+  // daytime roundtables for the week: open-format, one topic, members sign up
+  ev('rt-funding', 'roundtable', '开放座谈：第一次融资，先找谁？', 'Roundtable: Who to Call First', 1, '15:00', '16:30', 1, 12, { host: '江念', intro: '天使、机构、产业资本，第一笔钱该找谁？带着你的项目阶段来，一起聊。投资人和创始人都欢迎。', hook: '第一笔钱该找谁？', location: '座谈沙龙' });
+  ev('rt-chips', 'roundtable', '早间座谈：《芯片战争》读书会', 'Morning Read: Chip War', 2, '10:30', '11:30', 1, 10, { host: '周以宁', intro: '这次读第一部分。没读完也可以来听，书在 3F 书架，可以现场借。', hook: '这次读第一部分。', location: '座谈沙龙' });
+  ev('rt-customer', 'roundtable', '开放座谈：机器人公司的第一个客户', 'Roundtable: The First Customer', 2, '16:00', '17:30', 1, 12, { host: '季长风', intro: '第一个付钱的客户是怎么来的？请做过交付的朋友讲讲踩过的坑。', hook: '第一个付钱的客户是怎么来的？', location: '圆桌座谈 · 1976' });
+  ev('rt-llm', 'roundtable', '开放座谈：小团队怎么用好大模型', 'Roundtable: Small Teams, Big Models', 3, '15:00', '16:30', 1, 12, { host: '顾言', intro: '五个人以内的团队，大模型到底用在哪里最值？欢迎带上你们的真实用法。', hook: '五个人以内的团队，大模型用在哪最值？', location: '圆桌座谈 · 1957' });
+  ev('rt-founder', 'roundtable', '开放座谈：从工程师到创始人', 'Roundtable: Engineer to Founder', 5, '14:00', '15:30', 1, 10, { host: '陆星河', intro: '写代码的人第一次当老板，最难的是什么？几位过来人分享，也欢迎正在犹豫的你。', hook: '写代码的人第一次当老板，最难的是什么？', location: '座谈沙龙' });
+  ev('rt-weekly', 'roundtable', '早间座谈：一周硬科技新闻', 'Morning: The Week in Deep Tech', 6, '11:00', '12:00', 1, 10, { host: '许嘉禾', intro: '挑三条本周的硬科技新闻，各说十分钟，再一起聊聊背后的生意。', hook: '挑三条新闻，聊背后的生意。', location: '座谈沙龙' });
   ev('ev-podcast', 'podcast', '播客现场录制 · 第 01 期', 'Live Podcast, Episode 01', 2, '16:00', '17:30', 0, 30, { host: '许嘉禾', guests: '陈牧之', intro: '《Something Ventured》第一期：谁在给机器人下注？现场观众的问题会被剪进正片。', hook: '谁在给机器人下注？', public: true });
   ev('ev-embodied', 'panel', '闭门分享：具身智能的下一个十年', 'Embodied AI, the Next Decade', 4, '15:00', '17:00', 1, 20, { host: '苏砚', guests: '傅辰 · 周以宁', intro: '数据、硬件、商业化，哪一个会先成为瓶颈？两位创始人与一位投资人的闭门对谈。', hook: '数据、硬件、商业化，哪一个会先成为瓶颈？' });
   ev('ev-public', 'panel', '公开课：风险投资的八十年', 'Eighty Years of Venture', 3, '14:00', '15:30', 0, 40, { host: '江念', intro: '从 1946 年的 ARD 到今天的 AI 基金：一堂讲给所有人的课。非会员可报名。', hook: '从 1946 年的 ARD 讲到今天。', public: true });
@@ -406,6 +413,10 @@ export function seed(t = Date.now()) {
   [U(14), lin, U(6), U(2), U(10)].forEach((u, i) => reg('ev-hand', u, 'attended', i === 0));
   [U(2), U(5), U(12)].forEach(u => reg('ev-agent', u));
   [U(1), U(9)].forEach(u => reg('ev-read', u));
+  [U(2), U(3), U(8), U(13)].forEach(u => reg('rt-funding', u));
+  [U(5), U(12)].forEach(u => reg('rt-chips', u));
+  [U(4), U(6), U(10), U(11), U(14), U(16), U(17), U(18), U(19), U(20), U(2)].forEach(u => reg('rt-customer', u));
+  [U(9)].forEach(u => reg('rt-llm', u));
   [U(3), U(8), visitor].forEach(u => reg('ev-podcast', u));
   [U(4), U(17), U(1), U(6), U(11)].forEach(u => reg('ev-embodied', u));
   // unlocks that those facts imply
@@ -809,6 +820,13 @@ def('me', 'optional', ctx => {
   };
 });
 
+def('profile.update', 'user', (ctx, { name }) => {
+  const n = clean(name, 20);
+  if (!n) fail('请填写你的称呼');
+  ctx.user.name = n;
+  ctx.touch('members');
+  return { name: n };
+});
 def('unlock.seen', 'user', ctx => { ctx.user.unlock_seen = true; ctx.touch('session'); return { ok: true }; });
 
 def('home', 'optional', ctx => {

@@ -1,6 +1,6 @@
 /* =========================================================
    library live · the floor plan as ink on paper (shared/plan.js → planSVG)
-   Used by the public layer of the member app and by the back-office board.
+   Used by the floor-plan sheet in the member app.
    Needs --mono, --sans, --serif, --futura and --ease from the page's stylesheet.
    ========================================================= */
 @keyframes sp-blink { 50% { opacity: .2; } }

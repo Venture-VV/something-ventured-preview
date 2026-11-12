@@ -1,19 +1,12 @@
-/* Something Ventured · member app service worker
+/* library live · member app service worker
    - app shell: network first, cached copy when offline (so updates land on the next open)
-   - fonts & images: cache first
-   - the API is never cached here; the app keeps its own offline copy of what it last saw */
-const VERSION = 'sv-app-v2.1';
+   - images: cache first
+   - the API is never cached */
+const VERSION = 'sv-app-v3';
 const SHELL = [
-  './', './index.html', './app.css', './app.js', './ascii.js', './manifest.webmanifest',
+  './', './index.html', './app.css', './app.js', './manifest.webmanifest',
   '../shared/core.js', '../shared/api.js', '../shared/ui.js', '../shared/plan.js', '../shared/plan.css',
-  './icons/icon-192.png', './icons/apple-touch-icon.png',
-  '../assets/img/favicon.svg',
-  '../assets/fonts/jost-latin-var.woff2',
-  '../assets/fonts/source-serif-4-latin-var.woff2',
-  '../assets/fonts/source-serif-4-latin-var-italic.woff2',
-  '../assets/fonts/noto-serif-sc-600-app.woff2',
-  '../assets/fonts/ibm-plex-mono-latin-400.woff2',
-  '../assets/fonts/ibm-plex-mono-latin-500.woff2',
+  './icons/icon-192.png', './icons/apple-touch-icon.png', '../assets/img/favicon.svg',
 ];
 
 self.addEventListener('install', event => {
@@ -28,8 +21,7 @@ self.addEventListener('fetch', event => {
   const req = event.request;
   const url = new URL(req.url);
   if (req.method !== 'GET' || url.origin !== location.origin || url.pathname.includes('/api/')) return;
-  const isAsset = /\.(woff2|png|jpg|svg)$/.test(url.pathname);
-  if (isAsset) {
+  if (/\.(woff2|png|jpg|svg)$/.test(url.pathname)) {
     event.respondWith(caches.match(req).then(hit => hit || fetch(req).then(res => { const copy = res.clone(); caches.open(VERSION).then(c => c.put(req, copy)); return res; })));
     return;
   }
